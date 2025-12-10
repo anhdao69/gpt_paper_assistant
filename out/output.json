@@ -1,772 +1,494 @@
 {
-    "2512.06838": {
+    "2512.08240": {
         "authors": [
-            "Jiahao Wang",
-            "Zhongwei Jiang",
-            "Wenchao Sun",
-            "Jiaru Zhong",
-            "Haibao Yu",
-            "Yuner Zhang",
-            "Chenyang Lu",
-            "Chuang Zhang",
-            "Lei He",
-            "Shaobing Xu",
-            "Jianqiang Wang"
+            "Jusheng Zhang",
+            "Xiaoyang Guo",
+            "Kaitong Cai",
+            "Qinhan Lv",
+            "Yijia Fan",
+            "Wenhao Chai",
+            "Jian Wang",
+            "Keze Wang"
         ],
-        "title": "SparseCoop: Cooperative Perception with Kinematic-Grounded Queries",
-        "abstract": "arXiv:2512.06838v1 Announce Type: new  Abstract: Cooperative perception is critical for autonomous driving, overcoming the inherent limitations of a single vehicle, such as occlusions and constrained fields-of-view. However, current approaches sharing dense Bird's-Eye-View (BEV) features are constrained by quadratically-scaling communication costs and the lack of flexibility and interpretability for precise alignment across asynchronous or disparate viewpoints. While emerging sparse query-based methods offer an alternative, they often suffer from inadequate geometric representations, suboptimal fusion strategies, and training instability. In this paper, we propose SparseCoop, a fully sparse cooperative perception framework for 3D detection and tracking that completely discards intermediate BEV representations. Our framework features a trio of innovations: a kinematic-grounded instance query that uses an explicit state vector with 3D geometry and velocity for precise spatio-temporal alignment; a coarse-to-fine aggregation module for robust fusion; and a cooperative instance denoising task to accelerate and stabilize training. Experiments on V2X-Seq and Griffin datasets show SparseCoop achieves state-of-the-art performance. Notably, it delivers this with superior computational efficiency, low transmission cost, and strong robustness to communication latency. Code is available at https://github.com/wang-jh18-SVM/SparseCoop.",
-        "arxiv_id": "2512.06838",
-        "ARXIVID": "2512.06838",
-        "COMMENT": "Matches criterion 3 (Embodied/Robotic AI: New Benchmarks or Methods) due to its focus on cooperative perception for autonomous driving with novel sparse query-based methods.",
-        "RELEVANCE": 10,
-        "NOVELTY": 8
-    },
-    "2512.07580": {
-        "authors": [
-            "Yahong Wang",
-            "Juncheng Wu",
-            "Zhangkai Ni",
-            "Longzhen Yang",
-            "Yihang Liu",
-            "Chengmei Yang",
-            "Ying Wen",
-            "Xianfeng Tang",
-            "Hui Liu",
-            "Yuyin Zhou",
-            "Lianghua He"
-        ],
-        "title": "All You Need Are Random Visual Tokens? Demystifying Token Pruning in VLLMs",
-        "abstract": "arXiv:2512.07580v1 Announce Type: new  Abstract: Vision Large Language Models (VLLMs) incur high computational costs due to their reliance on hundreds of visual tokens to represent images. While token pruning offers a promising solution for accelerating inference, this paper, however, identifies a key observation: in deeper layers (e.g., beyond the 20th), existing training-free pruning methods perform no better than random pruning. We hypothesize that this degradation is caused by \"vanishing token information\", where visual tokens progressively lose their salience with increasing network depth. To validate this hypothesis, we quantify a token's information content by measuring the change in the model output probabilities upon its removal. Using this proposed metric, our analysis of the information of visual tokens across layers reveals three key findings: (1) As layers deepen, the information of visual tokens gradually becomes uniform and eventually vanishes at an intermediate layer, which we term as \"information horizon\", beyond which the visual tokens become redundant; (2) The position of this horizon is not static; it extends deeper for visually intensive tasks, such as Optical Character Recognition (OCR), compared to more general tasks like Visual Question Answering (VQA); (3) This horizon is also strongly correlated with model capacity, as stronger VLLMs (e.g., Qwen2.5-VL) employ deeper visual tokens than weaker models (e.g., LLaVA-1.5). Based on our findings, we show that simple random pruning in deep layers efficiently balances performance and efficiency. Moreover, integrating random pruning consistently enhances existing methods. Using DivPrune with random pruning achieves state-of-the-art results, maintaining 96.9% of Qwen-2.5-VL-7B performance while pruning 50% of visual tokens. The code will be publicly available at https://github.com/YahongWang1/Information-Horizon.",
-        "arxiv_id": "2512.07580",
-        "ARXIVID": "2512.07580",
-        "COMMENT": "This paper aligns with Criterion 2 as it explores token pruning in Vision Large Language Models (VLLMs), which is directly related to visual and multimodal large language models.",
-        "RELEVANCE": 10,
-        "NOVELTY": 7
-    },
-    "2512.07237": {
-        "authors": [
-            "Cheng Zhang",
-            "Boying Li",
-            "Meng Wei",
-            "Yan-Pei Cao",
-            "Camilo Cruz Gambardella",
-            "Dinh Phung",
-            "Jianfei Cai"
-        ],
-        "title": "Unified Camera Positional Encoding for Controlled Video Generation",
-        "abstract": "arXiv:2512.07237v1 Announce Type: new  Abstract: Transformers have emerged as a universal backbone across 3D perception, video generation, and world models for autonomous driving and embodied AI, where understanding camera geometry is essential for grounding visual observations in three-dimensional space. However, existing camera encoding methods often rely on simplified pinhole assumptions, restricting generalization across the diverse intrinsics and lens distortions in real-world cameras. We introduce Relative Ray Encoding, a geometry-consistent representation that unifies complete camera information, including 6-DoF poses, intrinsics, and lens distortions. To evaluate its capability under diverse controllability demands, we adopt camera-controlled text-to-video generation as a testbed task. Within this setting, we further identify pitch and roll as two components effective for Absolute Orientation Encoding, enabling full control over the initial camera orientation. Together, these designs form UCPE (Unified Camera Positional Encoding), which integrates into a pretrained video Diffusion Transformer through a lightweight spatial attention adapter, adding less than 1% trainable parameters while achieving state-of-the-art camera controllability and visual fidelity. To facilitate systematic training and evaluation, we construct a large video dataset covering a wide range of camera motions and lens types. Extensive experiments validate the effectiveness of UCPE in camera-controllable video generation and highlight its potential as a general camera representation for Transformers across future multi-view, video, and 3D tasks. Code will be available at https://github.com/chengzhag/UCPE.",
-        "arxiv_id": "2512.07237",
-        "ARXIVID": "2512.07237",
-        "COMMENT": "Matches criterion 6 (Video Understanding) and criterion 5 (Integration of Image/Video and Large Language Models) due to its focus on camera-controlled video generation and its integration into video diffusion transformers.",
-        "RELEVANCE": 9,
-        "NOVELTY": 8
-    },
-    "2512.07599": {
-        "authors": [
-            "Hanshi Wang",
-            "Zijian Cai",
-            "Jin Gao",
-            "Yiwei Zhang",
-            "Weiming Hu",
-            "Ke Wang",
-            "Zhipeng Zhang"
-        ],
-        "title": "Online Segment Any 3D Thing as Instance Tracking",
-        "abstract": "arXiv:2512.07599v1 Announce Type: new  Abstract: Online, real-time, and fine-grained 3D segmentation constitutes a fundamental capability for embodied intelligent agents to perceive and comprehend their operational environments. Recent advancements employ predefined object queries to aggregate semantic information from Vision Foundation Models (VFMs) outputs that are lifted into 3D point clouds, facilitating spatial information propagation through inter-query interactions. Nevertheless, perception is an inherently dynamic process, rendering temporal understanding a critical yet overlooked dimension within these prevailing query-based pipelines. Therefore, to further unlock the temporal environmental perception capabilities of embodied agents, our work reconceptualizes online 3D segmentation as an instance tracking problem (AutoSeg3D). Our core strategy involves utilizing object queries for temporal information propagation, where long-term instance association promotes the coherence of features and object identities, while short-term instance update enriches instant observations. Given that viewpoint variations in embodied robotics often lead to partial object visibility across frames, this mechanism aids the model in developing a holistic object understanding beyond incomplete instantaneous views. Furthermore, we introduce spatial consistency learning to mitigate the fragmentation problem inherent in VFMs, yielding more comprehensive instance information for enhancing the efficacy of both long-term and short-term temporal learning. The temporal information exchange and consistency learning facilitated by these sparse object queries not only enhance spatial comprehension but also circumvent the computational burden associated with dense temporal point cloud interactions. Our method establishes a new state-of-the-art, surpassing ESAM by 2.8 AP on ScanNet200 and delivering consistent gains on ScanNet, SceneNN, and 3RScan datasets.",
-        "arxiv_id": "2512.07599",
-        "ARXIVID": "2512.07599",
-        "COMMENT": "Matches criterion 1 (Spatial Intelligence and Embodied Agents) and criterion 3 (Embodied/Robotic AI: New Benchmarks or Methods) due to its focus on online 3D segmentation and temporal understanding for embodied agents.",
-        "RELEVANCE": 10,
-        "NOVELTY": 7
-    },
-    "2512.07170": {
-        "authors": [
-            "Jiayang Li",
-            "Chengjie Jiang",
-            "Junjun Jiang",
-            "Pengwei Liang",
-            "Jiayi Ma",
-            "Liqiang Nie"
-        ],
-        "title": "Towards Unified Semantic and Controllable Image Fusion: A Diffusion Transformer Approach",
-        "abstract": "arXiv:2512.07170v1 Announce Type: new  Abstract: Image fusion aims to blend complementary information from multiple sensing modalities, yet existing approaches remain limited in robustness, adaptability, and controllability. Most current fusion networks are tailored to specific tasks and lack the ability to flexibly incorporate user intent, especially in complex scenarios involving low-light degradation, color shifts, or exposure imbalance. Moreover, the absence of ground-truth fused images and the small scale of existing datasets make it difficult to train an end-to-end model that simultaneously understands high-level semantics and performs fine-grained multimodal alignment. We therefore present DiTFuse, instruction-driven Diffusion-Transformer (DiT) framework that performs end-to-end, semantics-aware fusion within a single model. By jointly encoding two images and natural-language instructions in a shared latent space, DiTFuse enables hierarchical and fine-grained control over fusion dynamics, overcoming the limitations of pre-fusion and post-fusion pipelines that struggle to inject high-level semantics. The training phase employs a multi-degradation masked-image modeling strategy, so the network jointly learns cross-modal alignment, modality-invariant restoration, and task-aware feature selection without relying on ground truth images. A curated, multi-granularity instruction dataset further equips the model with interactive fusion capabilities. DiTFuse unifies infrared-visible, multi-focus, and multi-exposure fusion-as well as text-controlled refinement and downstream tasks-within a single architecture. Experiments on public IVIF, MFF, and MEF benchmarks confirm superior quantitative and qualitative performance, sharper textures, and better semantic retention. The model also supports multi-level user control and zero-shot generalization to other multi-image fusion scenarios, including instruction-conditioned segmentation.",
-        "arxiv_id": "2512.07170",
-        "ARXIVID": "2512.07170",
-        "COMMENT": "This paper aligns with Criterion 5 as it focuses on integrating image fusion tasks with natural language instructions, combining image understanding and large language models.",
+        "title": "HybridToken-VLM: Hybrid Token Compression for Vision-Language Models",
+        "abstract": "arXiv:2512.08240v1 Announce Type: new  Abstract: Vision-language models (VLMs) have transformed multimodal reasoning, but feeding hundreds of visual patch tokens into LLMs incurs quadratic computational costs, straining memory and context windows. Traditional approaches face a trade-off: continuous compression dilutes high-level semantics such as object identities, while discrete quantization loses fine-grained details such as textures. We introduce HTC-VLM, a hybrid framework that disentangles semantics and appearance through dual channels, i.e., a continuous pathway for fine-grained details via ViT patches and a discrete pathway for symbolic anchors using MGVQ quantization projected to four tokens. These are fused into a 580-token hybrid sequence and compressed into a single voco token via a disentanglement attention mask and bottleneck, ensuring efficient and grounded representations. HTC-VLM achieves an average performance retention of 87.2 percent across seven benchmarks (GQA, VQAv2, MMBench, MME, POPE, SEED-Bench, ScienceQA-Image), outperforming the leading continuous baseline at 81.0 percent with a 580-to-1 compression ratio. Attention analyses show that the compressed token prioritizes the discrete anchor, validating its semantic guidance. Our work demonstrates that a minimalist hybrid design can resolve the efficiency-fidelity dilemma and advance scalable VLMs.",
+        "arxiv_id": "2512.08240",
+        "ARXIVID": "2512.08240",
+        "COMMENT": "Matches criterion 2. Proposes a hybrid token compression framework for Vision-Language Models, addressing computational efficiency and fidelity in multimodal reasoning.",
         "RELEVANCE": 9,
         "NOVELTY": 7
     },
-    "2512.06662": {
+    "2512.08924": {
         "authors": [
-            "Ruoyu Xue",
-            "Hieu Le",
-            "Jingyi Xu",
-            "Sounak Mondal",
-            "Abe Leite",
-            "Gregory Zelinsky",
-            "Minh Hoai",
-            "Dimitris Samaras"
+            "Chuhan Zhang",
+            "Guillaume Le Moing",
+            "Skanda Koppula",
+            "Ignacio Rocco",
+            "Liliane Momeni",
+            "Junyu Xie",
+            "Shuyang Sun",
+            "Rahul Sukthankar",
+            "Jo\\\"elle K Barral",
+            "Raia Hadsell",
+            "Zoubin Ghahramani",
+            "Andrew Zisserman",
+            "Junlin Zhang",
+            "Mehdi SM Sajjadi"
         ],
-        "title": "Personalized Image Descriptions from Attention Sequences",
-        "abstract": "arXiv:2512.06662v1 Announce Type: new  Abstract: People can view the same image differently: they focus on different regions, objects, and details in varying orders and describe them in distinct linguistic styles. This leads to substantial variability in image descriptions. However, existing models for personalized image description focus on linguistic style alone, with no prior work leveraging individual viewing patterns. We address this gap by explicitly modeling personalized viewing behavior as a core factor in description generation. Our method, DEPER (DEscription-PERception persona encoder), learns a subject embedding that captures both linguistic style and viewing behavior, guided by an auxiliary attention-prediction task. A lightweight adapter aligns these embeddings with a frozen vision-language model, enabling few-shot personalization without retraining. Across four datasets spanning diverse viewing tasks and both short and detailed descriptions, DEPER achieves a 24% average improvement, showing that modeling personalized attention produces more human-aligned and high-quality descriptions. We posit that understanding how people see helps predict what they say; modeling human diversity in perception can improve both performance and human alignment in multimodal systems.",
-        "arxiv_id": "2512.06662",
-        "ARXIVID": "2512.06662",
-        "COMMENT": "Matches criterion 5 (Integration of Image/Video and Large Language Models) due to its focus on personalized image descriptions using multimodal systems.",
-        "RELEVANCE": 9,
-        "NOVELTY": 7
-    },
-    "2512.06376": {
-        "authors": [
-            "Xinhao Xiang",
-            "Abhijeet Rastogi",
-            "Jiawei Zhang"
-        ],
-        "title": "Are AI-Generated Driving Videos Ready for Autonomous Driving? A Diagnostic Evaluation Framework",
-        "abstract": "arXiv:2512.06376v1 Announce Type: new  Abstract: Recent text-to-video models have enabled the generation of high-resolution driving scenes from natural language prompts. These AI-generated driving videos (AIGVs) offer a low-cost, scalable alternative to real or simulator data for autonomous driving (AD). But a key question remains: can such videos reliably support training and evaluation of AD models? We present a diagnostic framework that systematically studies this question. First, we introduce a taxonomy of frequent AIGV failure modes, including visual artifacts, physically implausible motion, and violations of traffic semantics, and demonstrate their negative impact on object detection, tracking, and instance segmentation. To support this analysis, we build ADGV-Bench, a driving-focused benchmark with human quality annotations and dense labels for multiple perception tasks. We then propose ADGVE, a driving-aware evaluator that combines static semantics, temporal cues, lane obedience signals, and Vision-Language Model(VLM)-guided reasoning into a single quality score for each clip. Experiments show that blindly adding raw AIGVs can degrade perception performance, while filtering them with ADGVE consistently improves both general video quality assessment metrics and downstream AD models, and turns AIGVs into a beneficial complement to real-world data. Our study highlights both the risks and the promise of AIGVs, and provides practical tools for safely leveraging large-scale video generation in future AD pipelines.",
-        "arxiv_id": "2512.06376",
-        "ARXIVID": "2512.06376",
-        "COMMENT": "Matches criterion 6 (Video Understanding) as it evaluates AI-generated driving videos for autonomous driving tasks.",
+        "title": "Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
+        "abstract": "arXiv:2512.08924v1 Announce Type: new  Abstract: Understanding and reconstructing the complex geometry and motion of dynamic scenes from video remains a formidable challenge in computer vision. This paper introduces D4RT, a simple yet powerful feedforward model designed to efficiently solve this task. D4RT utilizes a unified transformer architecture to jointly infer depth, spatio-temporal correspondence, and full camera parameters from a single video. Its core innovation is a novel querying mechanism that sidesteps the heavy computation of dense, per-frame decoding and the complexity of managing multiple, task-specific decoders. Our decoding interface allows the model to independently and flexibly probe the 3D position of any point in space and time. The result is a lightweight and highly scalable method that enables remarkably efficient training and inference. We demonstrate that our approach sets a new state of the art, outperforming previous methods across a wide spectrum of 4D reconstruction tasks. We refer to the project webpage for animated results: https://d4rt-paper.github.io/.",
+        "arxiv_id": "2512.08924",
+        "ARXIVID": "2512.08924",
+        "COMMENT": "Matches criterion 6. Proposes a novel transformer-based model for dynamic scene reconstruction from video, advancing video understanding tasks.",
         "RELEVANCE": 8,
         "NOVELTY": 7
     },
-    "2512.07234": {
+    "2512.08511": {
         "authors": [
-            "Biao Chen",
-            "Lin Zuo",
-            "Mengmeng Jing",
-            "Kunbin He",
-            "Yuchen Wang"
+            "Wenxi Yang",
+            "Yuzhong Zhao",
+            "Fang Wan",
+            "Qixiang Ye"
         ],
-        "title": "Dropout Prompt Learning: Towards Robust and Adaptive Vision-Language Models",
-        "abstract": "arXiv:2512.07234v1 Announce Type: new  Abstract: Dropout is a widely used regularization technique which improves the generalization ability of a model by randomly dropping neurons. In light of this, we propose Dropout Prompt Learning, which aims for applying dropout to improve the robustness of the vision-language models. Different from the vanilla dropout, we apply dropout on the tokens of the textual and visual branches, where we evaluate the token significance considering both intra-modal context and inter-modal alignment, enabling flexible dropout probabilities for each token. Moreover, to maintain semantic alignment for general knowledge transfer while encouraging the diverse representations that dropout introduces, we further propose residual entropy regularization. Experiments on 15 benchmarks show our method's effectiveness in challenging scenarios like low-shot learning, long-tail classification, and out-of-distribution generalization. Notably, our method surpasses regularization-based methods including KgCoOp by 5.10% and PromptSRC by 2.13% in performance on base-to-novel generalization.",
-        "arxiv_id": "2512.07234",
-        "ARXIVID": "2512.07234",
-        "COMMENT": "This paper matches criterion 2 as it explores improvements in vision-language models (VLLMs) through a novel dropout-based prompt learning method. It also aligns with criterion 5 as it integrates image and language understanding tasks via inter-modal alignment techniques.",
+        "title": "Thinking with Images via Self-Calling Agent",
+        "abstract": "arXiv:2512.08511v1 Announce Type: new  Abstract: Thinking-with-images paradigms have showcased remarkable visual reasoning capability by integrating visual information as dynamic elements into the Chain-of-Thought (CoT). However, optimizing interleaved multimodal CoT (iMCoT) through reinforcement learning remains challenging, as it relies on scarce high-quality reasoning data. In this study, we propose Self-Calling Chain-of-Thought (sCoT), a novel visual reasoning paradigm that reformulates iMCoT as a language-only CoT with self-calling. Specifically, a main agent decomposes the complex visual reasoning task to atomic subtasks and invokes its virtual replicas, i.e. parameter-sharing subagents, to solve them in isolated context. sCoT enjoys substantial training effectiveness and efficiency, as it requires no explicit interleaving between modalities. sCoT employs group-relative policy optimization to reinforce effective reasoning behavior to enhance optimization. Experiments on HR-Bench 4K show that sCoT improves the overall reasoning performance by up to $1.9\\%$ with $\\sim 75\\%$ fewer GPU hours compared to strong baseline approaches. Code is available at https://github.com/YWenxi/think-with-images-through-self-calling.",
+        "arxiv_id": "2512.08511",
+        "ARXIVID": "2512.08511",
+        "COMMENT": "Matches criterion 2. Proposes a novel visual reasoning paradigm integrating visual information into Chain-of-Thought reasoning, which aligns with advancements in Visual and Multimodal Large Language Models.",
         "RELEVANCE": 8,
-        "NOVELTY": 6
+        "NOVELTY": 7
     },
-    "2512.06769": {
+    "2512.08557": {
         "authors": [
-            "Hang Yin",
-            "Xiaomin He",
-            "PeiWen Yuan",
-            "Yiwei Li",
-            "Jiayi Shi",
-            "Wenxiao Fan",
-            "Shaoxiong Feng",
-            "Kan Li"
+            "Alexander Dow",
+            "Manduhu Manduhu",
+            "Matheus Santos",
+            "Ben Bartlett",
+            "Gerard Dooly",
+            "James Riordan"
         ],
-        "title": "Stitch and Tell: A Structured Multimodal Data Augmentation Method for Spatial Understanding",
-        "abstract": "arXiv:2512.06769v1 Announce Type: new  Abstract: Existing vision-language models often suffer from spatial hallucinations, i.e., generating incorrect descriptions about the relative positions of objects in an image. We argue that this problem mainly stems from the asymmetric properties between images and text. To enrich the spatial understanding ability of vision-language models, we propose a simple, annotation-free, plug-and-play method named $\\text{Stitch and Tell}$ (abbreviated as SiTe), which injects structured spatial supervision into data. It constructs stitched image-text pairs by stitching images along a spatial axis and generating spatially-aware captions or question answer pairs based on the layout of stitched image, without relying on costly advanced models or human involvement. We evaluate SiTe across three architectures including LLaVA-v1.5-7B, LLaVA-Qwen2-1.5B and HALVA-7B, two training datasets, and eight benchmarks. Experiments show that SiTe improves spatial understanding tasks such as $\\text{MME}_{\\text{Position}}$ (+5.50%) and Spatial-MM (+4.19%), while maintaining or improving performance on general vision-language benchmarks including COCO-QA (+1.02%) and MMBench (+4.76%). Our findings suggest that explicitly injecting spatially-aware structure into training data offers an effective way to mitigate spatial hallucinations and improve spatial understanding, while preserving general vision-language capabilities.",
-        "arxiv_id": "2512.06769",
-        "ARXIVID": "2512.06769",
-        "COMMENT": "This paper aligns with Criterion 1 as it proposes a method to improve spatial understanding in vision-language models, which is relevant to spatial intelligence and embodied agents.",
+        "title": "SSCATeR: Sparse Scatter-Based Convolution Algorithm with Temporal Data Recycling for Real-Time 3D Object Detection in LiDAR Point Clouds",
+        "abstract": "arXiv:2512.08557v1 Announce Type: new  Abstract: This work leverages the continuous sweeping motion of LiDAR scanning to concentrate object detection efforts on specific regions that receive a change in point data from one frame to another. We achieve this by using a sliding time window with short strides and consider the temporal dimension by storing convolution results between passes. This allows us to ignore unchanged regions, significantly reducing the number of convolution operations per forward pass without sacrificing accuracy. This data reuse scheme introduces extreme sparsity to detection data. To exploit this sparsity, we extend our previous work on scatter-based convolutions to allow for data reuse, and as such propose Sparse Scatter-Based Convolution Algorithm with Temporal Data Recycling (SSCATeR). This operation treats incoming LiDAR data as a continuous stream and acts only on the changing parts of the point cloud. By doing so, we achieve the same results with as much as a 6.61-fold reduction in processing time. Our test results show that the feature maps output by our method are identical to those produced by traditional sparse convolution techniques, whilst greatly increasing the computational efficiency of the network.",
+        "arxiv_id": "2512.08557",
+        "ARXIVID": "2512.08557",
+        "COMMENT": "Matches criterion 3 as it introduces a sparse convolution algorithm for real-time 3D object detection in LiDAR point clouds, relevant to embodied or robotic AI.",
         "RELEVANCE": 8,
-        "NOVELTY": 6
+        "NOVELTY": 7
     },
-    "2512.07568": {
+    "2512.08529": {
         "authors": [
-            "Xuecheng Li",
-            "Weikuan Jia",
-            "Alisher Kurbonaliev",
-            "Qurbonaliev Alisher",
-            "Khudzhamkulov Rustam",
-            "Ismoilov Shuhratjon",
-            "Eshmatov Javhariddin",
-            "Yuanjie Zheng"
+            "Yunzhu Zhang",
+            "Zeyu Pan",
+            "Zhengwen Zeng",
+            "Shuheng Shen",
+            "Changhua Meng",
+            "Linchao Zhu"
         ],
-        "title": "Dual-Stream Cross-Modal Representation Learning via Residual Semantic Decorrelation",
-        "abstract": "arXiv:2512.07568v1 Announce Type: new  Abstract: Cross-modal learning has become a fundamental paradigm for integrating heterogeneous information sources such as images, text, and structured attributes. However, multimodal representations often suffer from modality dominance, redundant information coupling, and spurious cross-modal correlations, leading to suboptimal generalization and limited interpretability. In particular, high-variance modalities tend to overshadow weaker but semantically important signals, while na\\\"ive fusion strategies entangle modality-shared and modality-specific factors in an uncontrolled manner. This makes it difficult to understand which modality actually drives a prediction and to maintain robustness when some modalities are noisy or missing. To address these challenges, we propose a Dual-Stream Residual Semantic Decorrelation Network (DSRSD-Net), a simple yet effective framework that disentangles modality-specific and modality-shared information through residual decomposition and explicit semantic decorrelation constraints. DSRSD-Net introduces: (1) a dual-stream representation learning module that separates intra-modal (private) and inter-modal (shared) latent factors via residual projection; (2) a residual semantic alignment head that maps shared factors from different modalities into a common space using a combination of contrastive and regression-style objectives; and (3) a decorrelation and orthogonality loss that regularizes the covariance structure of the shared space while enforcing orthogonality between shared and private streams, thereby suppressing cross-modal redundancy and preventing feature collapse. Experimental results on two large-scale educational benchmarks demonstrate that DSRSD-Net consistently improves next-step prediction and final outcome prediction over strong single-modality, early-fusion, late-fusion, and co-attention baselines.",
-        "arxiv_id": "2512.07568",
-        "ARXIVID": "2512.07568",
-        "COMMENT": "Matches criterion 2 (Visual and Multimodal Large Language Models) due to its focus on cross-modal representation learning and semantic decorrelation.",
+        "title": "MVP: Multiple View Prediction Improves GUI Grounding",
+        "abstract": "arXiv:2512.08529v1 Announce Type: new  Abstract: GUI grounding, which translates natural language instructions into precise pixel coordinates, is essential for developing practical GUI agents. However, we observe that existing grounding models exhibit significant coordinate prediction instability, minor visual perturbations (e.g. cropping a few pixels) can drastically alter predictions, flipping results between correct and incorrect. This instability severely undermines model performance, especially for samples with high-resolution and small UI elements. To address this issue, we propose Multi-View Prediction (MVP), a training-free framework that enhances grounding performance through multi-view inference. Our key insight is that while single-view predictions may be unstable, aggregating predictions from multiple carefully cropped views can effectively distinguish correct coordinates from outliers. MVP comprises two components: (1) Attention-Guided View Proposal, which derives diverse views guided by instruction-to-image attention scores, and (2) Multi-Coordinates Clustering, which ensembles predictions by selecting the centroid of the densest spatial cluster. Extensive experiments demonstrate MVP's effectiveness across various models and benchmarks. Notably, on ScreenSpot-Pro, MVP boosts UI-TARS-1.5-7B to 56.1%, GTA1-7B to 61.7%, Qwen3VL-8B-Instruct to 65.3%, and Qwen3VL-32B-Instruct to 74.0%. The code is available at https://github.com/ZJUSCL/MVP.",
+        "arxiv_id": "2512.08529",
+        "ARXIVID": "2512.08529",
+        "COMMENT": "Matches criterion 5 as it proposes a multi-view prediction framework for GUI grounding, integrating vision and language tasks.",
         "RELEVANCE": 8,
-        "NOVELTY": 6
+        "NOVELTY": 7
     },
-    "2512.06763": {
+    "2512.08930": {
         "authors": [
-            "Chengyang Yan",
-            "Mitch Bryson",
-            "Donald G. Dansereau"
+            "Youming Deng",
+            "Songyou Peng",
+            "Junyi Zhang",
+            "Kathryn Heal",
+            "Tiancheng Sun",
+            "John Flynn",
+            "Steve Marschner",
+            "Lucy Chai"
         ],
-        "title": "JOCA: Task-Driven Joint Optimisation of Camera Hardware and Adaptive Camera Control Algorithms",
-        "abstract": "arXiv:2512.06763v1 Announce Type: new  Abstract: The quality of captured images strongly influences the performance of downstream perception tasks. Recent works on co-designing camera systems with perception tasks have shown improved task performance. However, most prior approaches focus on optimising fixed camera parameters set at manufacturing, while many parameters, such as exposure settings, require adaptive control at runtime. This paper introduces a method that jointly optimises camera hardware and adaptive camera control algorithms with downstream vision tasks. We present a unified optimisation framework that integrates gradient-based and derivative-free methods, enabling support for both continuous and discrete parameters, non-differentiable image formation processes, and neural network-based adaptive control algorithms. To address non-differentiable effects such as motion blur, we propose DF-Grad, a hybrid optimisation strategy that trains adaptive control networks using signals from a derivative-free optimiser alongside unsupervised task-driven learning. Experiments show that our method outperforms baselines that optimise static and dynamic parameters separately, particularly under challenging conditions such as low light and fast motion. These results demonstrate that jointly optimising hardware parameters and adaptive control algorithms improves perception performance and provides a unified approach to task-driven camera system design.",
-        "arxiv_id": "2512.06763",
-        "ARXIVID": "2512.06763",
-        "COMMENT": "This paper aligns with Criterion 3 as it introduces a joint optimization framework for camera hardware and adaptive control algorithms, which is relevant to embodied/robotic AI methods.",
+        "title": "Selfi: Self Improving Reconstruction Engine via 3D Geometric Feature Alignment",
+        "abstract": "arXiv:2512.08930v1 Announce Type: new  Abstract: Novel View Synthesis (NVS) has traditionally relied on models with explicit 3D inductive biases combined with known camera parameters from Structure-from-Motion (SfM) beforehand. Recent vision foundation models like VGGT take an orthogonal approach -- 3D knowledge is gained implicitly through training data and loss objectives, enabling feed-forward prediction of both camera parameters and 3D representations directly from a set of uncalibrated images. While flexible, VGGT features lack explicit multi-view geometric consistency, and we find that improving such 3D feature consistency benefits both NVS and pose estimation tasks. We introduce Selfi, a self-improving 3D reconstruction pipeline via feature alignment, transforming a VGGT backbone into a high-fidelity 3D reconstruction engine by leveraging its own outputs as pseudo-ground-truth. Specifically, we train a lightweight feature adapter using a reprojection-based consistency loss, which distills VGGT outputs into a new geometrically-aligned feature space that captures spatial proximity in 3D. This enables state-of-the-art performance in both NVS and camera pose estimation, demonstrating that feature alignment is a highly beneficial step for downstream 3D reasoning.",
+        "arxiv_id": "2512.08930",
+        "ARXIVID": "2512.08930",
+        "COMMENT": "Matches criterion 6. Proposes a self-improving 3D reconstruction pipeline leveraging feature alignment, which contributes to video-based tasks and 3D reasoning.",
         "RELEVANCE": 7,
         "NOVELTY": 6
     },
-    "2512.07821": {
+    "2512.08296": {
         "authors": [
-            "Shaoheng Fang",
-            "Hanwen Jiang",
-            "Yunpeng Bai",
-            "Niloy J. Mitra",
-            "Qixing Huang"
+            "Yubin Kim",
+            "Ken Gu",
+            "Chanwoo Park",
+            "Chunjong Park",
+            "Samuel Schmidgall",
+            "A. Ali Heydari",
+            "Yao Yan",
+            "Zhihan Zhang",
+            "Yuchen Zhuang",
+            "Mark Malhotra",
+            "Paul Pu Liang",
+            "Hae Won Park",
+            "Yuzhe Yang",
+            "Xuhai Xu",
+            "Yilun Du",
+            "Shwetak Patel",
+            "Tim Althoff",
+            "Daniel McDuff",
+            "Xin Liu"
         ],
-        "title": "WorldReel: 4D Video Generation with Consistent Geometry and Motion Modeling",
-        "abstract": "arXiv:2512.07821v1 Announce Type: new  Abstract: Recent video generators achieve striking photorealism, yet remain fundamentally inconsistent in 3D. We present WorldReel, a 4D video generator that is natively spatio-temporally consistent. WorldReel jointly produces RGB frames together with 4D scene representations, including pointmaps, camera trajectory, and dense flow mapping, enabling coherent geometry and appearance modeling over time. Our explicit 4D representation enforces a single underlying scene that persists across viewpoints and dynamic content, yielding videos that remain consistent even under large non-rigid motion and significant camera movement. We train WorldReel by carefully combining synthetic and real data: synthetic data providing precise 4D supervision (geometry, motion, and camera), while real videos contribute visual diversity and realism. This blend allows WorldReel to generalize to in-the-wild footage while preserving strong geometric fidelity. Extensive experiments demonstrate that WorldReel sets a new state-of-the-art for consistent video generation with dynamic scenes and moving cameras, improving metrics of geometric consistency, motion coherence, and reducing view-time artifacts over competing methods. We believe that WorldReel brings video generation closer to 4D-consistent world modeling, where agents can render, interact, and reason about scenes through a single and stable spatiotemporal representation.",
-        "arxiv_id": "2512.07821",
-        "ARXIVID": "2512.07821",
-        "COMMENT": "Matches criterion 6 as it focuses on 4D video generation with consistent geometry and motion modeling.",
+        "title": "Towards a Science of Scaling Agent Systems",
+        "abstract": "arXiv:2512.08296v1 Announce Type: new  Abstract: Agents, language model (LM)-based systems that are capable of reasoning, planning, and acting are becoming the dominant paradigm for real-world AI applications. Despite this widespread adoption, the principles that determine their performance remain underexplored, leaving practitioners to rely on heuristics rather than principled design choices. We address this gap by deriving quantitative scaling principles for agent systems. We evaluate this across four diverse benchmarks: Finance-Agent, BrowseComp-Plus, PlanCraft, and Workbench. Using five canonical architectures (Single, Independent, Centralized, Decentralized, Hybrid) instantiated across three LLM families, we perform a controlled evaluation spanning 180 configurations with standardized tools and token budgets. We derive a predictive model using empirical coordination metrics, including efficiency, overhead, error amplification, and redundancy, that achieves cross-validated R^2=0.513. We identify three dominant effects: (1) a tool-coordination trade-off: under fixed computational budgets, tool-heavy tasks suffer disproportionately from multi-agent overhead. (2) a capability saturation: coordination yields diminishing or negative returns (beta=-0.408, p<0.001) once single-agent baselines exceed ~45%. (3) topology-dependent error amplification: independent agents amplify errors 17.2x through unchecked propagation, while centralized coordination contains this to 4.4x. Centralized coordination improves performance by 80.9% on parallelizable tasks like financial reasoning, while decentralized coordination excels on dynamic web navigation (+9.2% vs. +0.2%). Yet for sequential reasoning tasks, all multi-agent variants degraded performance by 39-70%. The framework predicts the optimal coordination strategy for 87% of held-out configurations, providing a predictive principle of agentic scaling based on measurable task properties.",
+        "arxiv_id": "2512.08296",
+        "ARXIVID": "2512.08296",
+        "COMMENT": "Matches criterion 3. Introduces scaling principles for agent systems and evaluates them across diverse benchmarks, providing insights into embodied/robotic AI.",
+        "RELEVANCE": 7,
+        "NOVELTY": 6
+    },
+    "2512.08912": {
+        "authors": [
+            "Simon de Moreau",
+            "Andrei Bursuc",
+            "Hafid El-Idrissi",
+            "Fabien Moutarde"
+        ],
+        "title": "LiDAS: Lighting-driven Dynamic Active Sensing for Nighttime Perception",
+        "abstract": "arXiv:2512.08912v1 Announce Type: new  Abstract: Nighttime environments pose significant challenges for camera-based perception, as existing methods passively rely on the scene lighting. We introduce Lighting-driven Dynamic Active Sensing (LiDAS), a closed-loop active illumination system that combines off-the-shelf visual perception models with high-definition headlights. Rather than uniformly brightening the scene, LiDAS dynamically predicts an optimal illumination field that maximizes downstream perception performance, i.e., decreasing light on empty areas to reallocate it on object regions. LiDAS enables zero-shot nighttime generalization of daytime-trained models through adaptive illumination control. Trained on synthetic data and deployed zero-shot in real-world closed-loop driving scenarios, LiDAS enables +18.7% mAP50 and +5.0% mIoU over standard low-beam at equal power. It maintains performances while reducing energy use by 40%. LiDAS complements domain-generalization methods, further strengthening robustness without retraining. By turning readily available headlights into active vision actuators, LiDAS offers a cost-effective solution to robust nighttime perception.",
+        "arxiv_id": "2512.08912",
+        "ARXIVID": "2512.08912",
+        "COMMENT": "Matches criterion 3 as it introduces a novel active sensing system for nighttime perception, relevant to embodied or robotic AI.",
+        "RELEVANCE": 7,
+        "NOVELTY": 6
+    },
+    "2512.08606": {
+        "authors": [
+            "Zhenyu Zhang",
+            "Guangyao Chen",
+            "Yixiong Zou",
+            "Zhimeng Huang",
+            "Yuhua Li"
+        ],
+        "title": "Decoupling Template Bias in CLIP: Harnessing Empty Prompts for Enhanced Few-Shot Learning",
+        "abstract": "arXiv:2512.08606v1 Announce Type: new  Abstract: The Contrastive Language-Image Pre-Training (CLIP) model excels in few-shot learning by aligning visual and textual representations. Our study shows that template-sample similarity (TSS), defined as the resemblance between a text template and an image sample, introduces bias. This bias leads the model to rely on template proximity rather than true sample-to-category alignment, reducing both accuracy and robustness in classification. We present a framework that uses empty prompts, textual inputs that convey the idea of \"emptiness\" without category information. These prompts capture unbiased template features and offset TSS bias. The framework employs two stages. During pre-training, empty prompts reveal and reduce template-induced bias within the CLIP encoder. During few-shot fine-tuning, a bias calibration loss enforces correct alignment between images and their categories, ensuring the model focuses on relevant visual cues. Experiments across multiple benchmarks demonstrate that our template correction method significantly reduces performance fluctuations caused by TSS, yielding higher classification accuracy and stronger robustness. The repository of this project is available at https://github.com/zhenyuZ-HUST/Decoupling-Template-Bias-in-CLIP.",
+        "arxiv_id": "2512.08606",
+        "ARXIVID": "2512.08606",
+        "COMMENT": "Matches criterion 4 as it addresses template bias in CLIP, a vision-language foundation model, and improves its few-shot learning capabilities.",
+        "RELEVANCE": 7,
+        "NOVELTY": 6
+    },
+    "2512.08627": {
+        "authors": [
+            "Tianchen Qiu",
+            "Qirun Zhang",
+            "Jiajian He",
+            "Zhengyue Zhuge",
+            "Jiahui Xu",
+            "Yueting Chen"
+        ],
+        "title": "Trajectory Densification and Depth from Perspective-based Blur",
+        "abstract": "arXiv:2512.08627v1 Announce Type: new  Abstract: In the absence of a mechanical stabilizer, the camera undergoes inevitable rotational dynamics during capturing, which induces perspective-based blur especially under long-exposure scenarios. From an optical standpoint, perspective-based blur is depth-position-dependent: objects residing at distinct spatial locations incur different blur levels even under the same imaging settings. Inspired by this, we propose a novel method that estimate metric depth by examining the blur pattern of a video stream and dense trajectory via joint optical design algorithm. Specifically, we employ off-the-shelf vision encoder and point tracker to extract video information. Then, we estimate depth map via windowed embedding and multi-window aggregation, and densify the sparse trajectory from the optical algorithm using a vision-language model. Evaluations on multiple depth datasets demonstrate that our method attains strong performance over large depth range, while maintaining favorable generalization. Relative to the real trajectory in handheld shooting settings, our optical algorithm achieves superior precision and the dense reconstruction maintains strong accuracy.",
+        "arxiv_id": "2512.08627",
+        "ARXIVID": "2512.08627",
+        "COMMENT": "Matches criterion 6 as it proposes a novel method for depth estimation and trajectory densification using video blur patterns, which is relevant to video understanding.",
+        "RELEVANCE": 6,
+        "NOVELTY": 7
+    },
+    "2512.08888": {
+        "authors": [
+            "Manduhu Manduhu",
+            "Alexander Dow",
+            "Gerard Dooly",
+            "James Riordan"
+        ],
+        "title": "Accelerated Rotation-Invariant Convolution for UAV Image Segmentation",
+        "abstract": "arXiv:2512.08888v1 Announce Type: new  Abstract: Rotation invariance is essential for precise, object-level segmentation in UAV aerial imagery, where targets can have arbitrary orientations and exhibit fine-scale details. Conventional segmentation architectures like U-Net rely on convolution operators that are not rotation-invariant, leading to degraded segmentation accuracy across varying viewpoints. Rotation invariance can be achieved by expanding the filter bank across multiple orientations; however, this will significantly increase computational cost and memory traffic. In this paper, we introduce a GPU-optimized rotation-invariant convolution framework that eliminates the traditional data-lowering (im2col) step required for matrix-multiplication-based convolution. By exploiting structured data sharing among symmetrically rotated filters, our method achieves multi-orientation convolution with greatly reduced memory traffic and computational redundancy. We further generalize the approach to accelerate convolution with arbitrary (non-symmetric) rotation angles.   Across extensive benchmarks, the proposed convolution achieves 20--55% faster training and 15--45% lower energy consumption than CUDNN, while maintaining accuracy comparable to state-of-the-art rotation-invariant methods. In the eight-orientation setting, our approach achieves up to 45% speedup and 41% energy savings on 256\\(\\times\\)256 inputs, and 32% speedup and 23% lower energy usage on 1024\\(\\times\\)1024 inputs. Integrated into a U-Net segmentation model, the framework yields up to 6% improvement in accuracy over the non-rotation-aware baseline. These results demonstrate that the proposed method provides an effective and highly efficient alternative to existing rotation-invariant CNN frameworks.",
+        "arxiv_id": "2512.08888",
+        "ARXIVID": "2512.08888",
+        "COMMENT": "Matches criterion 3 as it introduces a novel method for rotation-invariant convolution, which is relevant for embodied or robotic AI tasks like UAV image segmentation.",
+        "RELEVANCE": 7,
+        "NOVELTY": 6
+    },
+    "2512.08254": {
+        "authors": [
+            "Yun Liu",
+            "Tao Li",
+            "Cosmin Ancuti",
+            "Wenqi Ren",
+            "Weisi Lin"
+        ],
+        "title": "SFP: Real-World Scene Recovery Using Spatial and Frequency Priors",
+        "abstract": "arXiv:2512.08254v1 Announce Type: new  Abstract: Scene recovery serves as a critical task for various computer vision applications. Existing methods typically rely on a single prior, which is inherently insufficient to handle multiple degradations, or employ complex network architectures trained on synthetic data, which suffer from poor generalization for diverse real-world scenarios. In this paper, we propose Spatial and Frequency Priors (SFP) for real-world scene recovery. In the spatial domain, we observe that the inverse of the degraded image exhibits a projection along its spectral direction that resembles the scene transmission. Leveraging this spatial prior, the transmission map is estimated to recover the scene from scattering degradation. In the frequency domain, a mask is constructed for adaptive frequency enhancement, with two parameters estimated using our proposed novel priors. Specifically, one prior assumes that the mean intensity of the degraded image's direct current (DC) components across three channels in the frequency domain closely approximates that of each channel in the clear image. The second prior is based on the observation that, for clear images, the magnitude of low radial frequencies below 0.001 constitutes approximately 1% of the total spectrum. Finally, we design a weighted fusion strategy to integrate spatial-domain restoration, frequency-domain enhancement, and salient features from the input image, yielding the final recovered result. Extensive evaluations demonstrate the effectiveness and superiority of our proposed SFP for scene recovery under various degradation conditions.",
+        "arxiv_id": "2512.08254",
+        "ARXIVID": "2512.08254",
+        "COMMENT": "Matches criterion 4 as it focuses on scene recovery using spatial and frequency priors, which aligns with vision foundation models and their applications.",
+        "RELEVANCE": 6,
+        "NOVELTY": 6
+    },
+    "2512.08366": {
+        "authors": [
+            "Wentao Zhang",
+            "Qunbo Wang",
+            "Tao Zhang",
+            "Junsheng Wu",
+            "Hongping Gan",
+            "Yang Liu",
+            "Ling Dai",
+            "Shizhuang Deng",
+            "Shuntong Sun"
+        ],
+        "title": "Reflecting with Two Voices: A Co-Adaptive Dual-Strategy Framework for LLM-Based Agent Decision Making",
+        "abstract": "arXiv:2512.08366v1 Announce Type: new  Abstract: Large language model (LLM) agents often rely on external demonstrations or retrieval-augmented planning, leading to brittleness, poor generalization, and high computational overhead. Inspired by human problem-solving, we propose DuSAR (Dual-Strategy Agent with Reflecting) - a demonstration-free framework that enables a single frozen LLM to perform co-adaptive reasoning via two complementary strategies: a high-level holistic plan and a context-grounded local policy. These strategies interact through a lightweight reflection mechanism, where the agent continuously assesses progress via a Strategy Fitness Score and dynamically revises its global plan when stuck or refines it upon meaningful advancement, mimicking human metacognitive behavior. On ALFWorld and Mind2Web, DuSAR achieves state-of-the-art performance with open-source LLMs (7B-70B), reaching 37.1% success on ALFWorld (Llama3.1-70B) - more than doubling the best prior result (13.0%) - and 4.02% on Mind2Web, also more than doubling the strongest baseline. Remarkably, it reduces per-step token consumption by 3-9X while maintaining strong performance. Ablation studies confirm the necessity of dual-strategy coordination. Moreover, optional integration of expert demonstrations further boosts results, highlighting DuSAR's flexibility and compatibility with external knowledge.",
+        "arxiv_id": "2512.08366",
+        "ARXIVID": "2512.08366",
+        "COMMENT": "Matches criterion 1 as it proposes a novel framework for embodied agents with co-adaptive reasoning strategies, relevant to spatial intelligence and embodied agents.",
         "RELEVANCE": 5,
         "NOVELTY": 7
     },
-    "2512.07745": {
+    "2512.08854": {
         "authors": [
-            "Jialv Zou",
-            "Shaoyu Chen",
-            "Bencheng Liao",
-            "Zhiyu Zheng",
-            "Yuehao Song",
-            "Lefei Zhang",
-            "Qian Zhang",
-            "Wenyu Liu",
-            "Xinggang Wang"
+            "Jack Brady",
+            "Bernhard Sch\\\"olkopf",
+            "Thomas Kipf",
+            "Simon Buchholz",
+            "Wieland Brendel"
         ],
-        "title": "DiffusionDriveV2: Reinforcement Learning-Constrained Truncated Diffusion Modeling in End-to-End Autonomous Driving",
-        "abstract": "arXiv:2512.07745v1 Announce Type: new  Abstract: Generative diffusion models for end-to-end autonomous driving often suffer from mode collapse, tending to generate conservative and homogeneous behaviors. While DiffusionDrive employs predefined anchors representing different driving intentions to partition the action space and generate diverse trajectories, its reliance on imitation learning lacks sufficient constraints, resulting in a dilemma between diversity and consistent high quality. In this work, we propose DiffusionDriveV2, which leverages reinforcement learning to both constrain low-quality modes and explore for superior trajectories. This significantly enhances the overall output quality while preserving the inherent multimodality of its core Gaussian Mixture Model. First, we use scale-adaptive multiplicative noise, ideal for trajectory planning, to promote broad exploration. Second, we employ intra-anchor GRPO to manage advantage estimation among samples generated from a single anchor, and inter-anchor truncated GRPO to incorporate a global perspective across different anchors, preventing improper advantage comparisons between distinct intentions (e.g., turning vs. going straight), which can lead to further mode collapse. DiffusionDriveV2 achieves 91.2 PDMS on the NAVSIM v1 dataset and 85.5 EPDMS on the NAVSIM v2 dataset in closed-loop evaluation with an aligned ResNet-34 backbone, setting a new record. Further experiments validate that our approach resolves the dilemma between diversity and consistent high quality for truncated diffusion models, achieving the best trade-off. Code and model will be available at https://github.com/hustvl/DiffusionDriveV2",
-        "arxiv_id": "2512.07745",
-        "ARXIVID": "2512.07745",
-        "COMMENT": "Matches criterion 3 as it introduces a novel method for autonomous driving using reinforcement learning and diffusion models.",
+        "title": "Generation is Required for Data-Efficient Perception",
+        "abstract": "arXiv:2512.08854v1 Announce Type: new  Abstract: It has been hypothesized that human-level visual perception requires a generative approach in which internal representations result from inverting a decoder. Yet today's most successful vision models are non-generative, relying on an encoder that maps images to representations without decoder inversion. This raises the question of whether generation is, in fact, necessary for machines to achieve human-level visual perception. To address this, we study whether generative and non-generative methods can achieve compositional generalization, a hallmark of human perception. Under a compositional data generating process, we formalize the inductive biases required to guarantee compositional generalization in decoder-based (generative) and encoder-based (non-generative) methods. We then show theoretically that enforcing these inductive biases on encoders is generally infeasible using regularization or architectural constraints. In contrast, for generative methods, the inductive biases can be enforced straightforwardly, thereby enabling compositional generalization by constraining a decoder and inverting it. We highlight how this inversion can be performed efficiently, either online through gradient-based search or offline through generative replay. We examine the empirical implications of our theory by training a range of generative and non-generative methods on photorealistic image datasets. We find that, without the necessary inductive biases, non-generative methods often fail to generalize compositionally and require large-scale pretraining or added supervision to improve generalization. By comparison, generative methods yield significant improvements in compositional generalization, without requiring additional data, by leveraging suitable inductive biases on a decoder along with search and replay.",
+        "arxiv_id": "2512.08854",
+        "ARXIVID": "2512.08854",
+        "COMMENT": "Matches criterion 4 as it focuses on generative approaches for visual perception, which aligns with vision foundation models and their applications.",
         "RELEVANCE": 5,
         "NOVELTY": 7
     },
-    "2512.07348": {
+    "2512.08785": {
         "authors": [
-            "Xinyu Wei",
-            "Kangrui Cen",
-            "Hongyang Wei",
-            "Zhen Guo",
-            "Bairui Li",
-            "Zeqing Wang",
-            "Jinrui Zhang",
+            "Yiming Hao",
+            "Mutian Xu",
+            "Chongjie Ye",
+            "Jie Qin",
+            "Shunlin Lu",
+            "Yipeng Qin",
+            "Xiaoguang Han"
+        ],
+        "title": "LoFA: Learning to Predict Personalized Priors for Fast Adaptation of Visual Generative Models",
+        "abstract": "arXiv:2512.08785v1 Announce Type: new  Abstract: Personalizing visual generative models to meet specific user needs has gained increasing attention, yet current methods like Low-Rank Adaptation (LoRA) remain impractical due to their demand for task-specific data and lengthy optimization. While a few hypernetwork-based approaches attempt to predict adaptation weights directly, they struggle to map fine-grained user prompts to complex LoRA distributions, limiting their practical applicability. To bridge this gap, we propose LoFA, a general framework that efficiently predicts personalized priors for fast model adaptation. We first identify a key property of LoRA: structured distribution patterns emerge in the relative changes between LoRA and base model parameters. Building on this, we design a two-stage hypernetwork: first predicting relative distribution patterns that capture key adaptation regions, then using these to guide final LoRA weight prediction. Extensive experiments demonstrate that our method consistently predicts high-quality personalized priors within seconds, across multiple tasks and user prompts, even outperforming conventional LoRA that requires hours of processing. Project page: https://jaeger416.github.io/lofa/.",
+        "arxiv_id": "2512.08785",
+        "ARXIVID": "2512.08785",
+        "COMMENT": "Matches criterion 5 as it focuses on fast adaptation of visual generative models, combining image understanding and generation tasks.",
+        "RELEVANCE": 5,
+        "NOVELTY": 6
+    },
+    "2512.08820": {
+        "authors": [
+            "Yi Zhang",
+            "Chun-Wun Cheng",
+            "Junyi He",
+            "Ke Yu",
+            "Yushun Tang",
+            "Carola-Bibiane Sch\\\"onlieb",
+            "Zhihai He",
+            "Angelica I. Aviles-Rivero"
+        ],
+        "title": "Training-Free Dual Hyperbolic Adapters for Better Cross-Modal Reasoning",
+        "abstract": "arXiv:2512.08820v1 Announce Type: new  Abstract: Recent research in Vision-Language Models (VLMs) has significantly advanced our capabilities in cross-modal reasoning. However, existing methods suffer from performance degradation with domain changes or require substantial computational resources for fine-tuning in new domains. To address this issue, we develop a new adaptation method for large vision-language models, called \\textit{Training-free Dual Hyperbolic Adapters} (T-DHA). We characterize the vision-language relationship between semantic concepts, which typically has a hierarchical tree structure, in the hyperbolic space instead of the traditional Euclidean space. Hyperbolic spaces exhibit exponential volume growth with radius, unlike the polynomial growth in Euclidean space. We find that this unique property is particularly effective for embedding hierarchical data structures using the Poincar\\'e ball model, achieving significantly improved representation and discrimination power. Coupled with negative learning, it provides more accurate and robust classifications with fewer feature dimensions. Our extensive experimental results on various datasets demonstrate that the T-DHA method significantly outperforms existing state-of-the-art methods in few-shot image recognition and domain generalization tasks.",
+        "arxiv_id": "2512.08820",
+        "ARXIVID": "2512.08820",
+        "COMMENT": "Matches criterion 2 as it develops a method for cross-modal reasoning in vision-language models, relevant to visual and multimodal large language models.",
+        "RELEVANCE": 5,
+        "NOVELTY": 6
+    },
+    "2512.08228": {
+        "authors": [
+            "Jusheng Zhang",
+            "Kaitong Cai",
+            "Xiaoyang Guo",
+            "Sidi Liu",
+            "Qinhan Lv",
+            "Ruiqi Chen",
+            "Jing Yang",
+            "Yijia Fan",
+            "Xiaofei Sun",
+            "Jian Wang",
+            "Ziliang Chen",
+            "Liang Lin",
+            "Keze Wang"
+        ],
+        "title": "MM-CoT:A Benchmark for Probing Visual Chain-of-Thought Reasoning in Multimodal Models",
+        "abstract": "arXiv:2512.08228v1 Announce Type: new  Abstract: The ability to perform Chain-of-Thought (CoT) reasoning marks a major milestone for multimodal models (MMs), enabling them to solve complex visual reasoning problems. Yet a critical question remains: is such reasoning genuinely grounded in visual evidence and logically coherent? Existing benchmarks emphasize generation but neglect verification, i.e., the capacity to assess whether a reasoning chain is both visually consistent and logically valid. To fill this gap, we introduce MM-CoT, a diagnostic benchmark specifically designed to probe the visual grounding and logical coherence of CoT reasoning in MMs. Instead of generating free-form explanations, models must select the sole event chain that satisfies two orthogonal constraints: (i) visual consistency, ensuring all steps are anchored in observable evidence, and (ii) logical coherence, ensuring causal and commonsense validity. Adversarial distractors are engineered to violate one of these constraints, exposing distinct reasoning failures. We evaluate leading vision-language models on MM-CoT and find that even the most advanced systems struggle, revealing a sharp discrepancy between generative fluency and true reasoning fidelity. MM-CoT shows low correlation with existing benchmarks, confirming that it measures a unique combination of visual grounding and logical reasoning. This benchmark provides a foundation for developing future models that reason not just plausibly, but faithfully and coherently within the visual world.",
+        "arxiv_id": "2512.08228",
+        "ARXIVID": "2512.08228",
+        "COMMENT": "Matches criterion 2 as it introduces a benchmark for visual chain-of-thought reasoning in multimodal models, which aligns with visual and multimodal large language models.",
+        "RELEVANCE": 5,
+        "NOVELTY": 6
+    },
+    "2512.08294": {
+        "authors": [
+            "Yexin Liu",
+            "Manyuan Zhang",
+            "Yueze Wang",
+            "Hongyu Li",
+            "Dian Zheng",
+            "Weiming Zhang",
+            "Changsheng Lu",
+            "Xunliang Cai",
+            "Yan Feng",
+            "Peng Pei",
+            "Harry Yang"
+        ],
+        "title": "OpenSubject: Leveraging Video-Derived Identity and Diversity Priors for Subject-driven Image Generation and Manipulation",
+        "abstract": "arXiv:2512.08294v1 Announce Type: new  Abstract: Despite the promising progress in subject-driven image generation, current models often deviate from the reference identities and struggle in complex scenes with multiple subjects. To address this challenge, we introduce OpenSubject, a video-derived large-scale corpus with 2.5M samples and 4.35M images for subject-driven generation and manipulation. The dataset is built with a four-stage pipeline that exploits cross-frame identity priors. (i) Video Curation. We apply resolution and aesthetic filtering to obtain high-quality clips. (ii) Cross-Frame Subject Mining and Pairing. We utilize vision-language model (VLM)-based category consensus, local grounding, and diversity-aware pairing to select image pairs. (iii) Identity-Preserving Reference Image Synthesis. We introduce segmentation map-guided outpainting to synthesize the input images for subject-driven generation and box-guided inpainting to generate input images for subject-driven manipulation, together with geometry-aware augmentations and irregular boundary erosion. (iv) Verification and Captioning. We utilize a VLM to validate synthesized samples, re-synthesize failed samples based on stage (iii), and then construct short and long captions. In addition, we introduce a benchmark covering subject-driven generation and manipulation, and then evaluate identity fidelity, prompt adherence, manipulation consistency, and background consistency with a VLM judge. Extensive experiments show that training with OpenSubject improves generation and manipulation performance, particularly in complex scenes.",
+        "arxiv_id": "2512.08294",
+        "ARXIVID": "2512.08294",
+        "COMMENT": "Matches criterion 5 as it integrates video-derived data for subject-driven image generation and manipulation, combining image and video understanding with generative tasks.",
+        "RELEVANCE": 5,
+        "NOVELTY": 6
+    },
+    "2512.08535": {
+        "authors": [
+            "Xinyue Liang",
+            "Zhinyuan Ma",
+            "Lingchen Sun",
+            "Yanjun Guo",
             "Lei Zhang"
         ],
-        "title": "MICo-150K: A Comprehensive Dataset Advancing Multi-Image Composition",
-        "abstract": "arXiv:2512.07348v1 Announce Type: new  Abstract: In controllable image generation, synthesizing coherent and consistent images from multiple reference inputs, i.e., Multi-Image Composition (MICo), remains a challenging problem, partly hindered by the lack of high-quality training data. To bridge this gap, we conduct a systematic study of MICo, categorizing it into 7 representative tasks and curate a large-scale collection of high-quality source images and construct diverse MICo prompts. Leveraging powerful proprietary models, we synthesize a rich amount of balanced composite images, followed by human-in-the-loop filtering and refinement, resulting in MICo-150K, a comprehensive dataset for MICo with identity consistency. We further build a Decomposition-and-Recomposition (De&Re) subset, where 11K real-world complex images are decomposed into components and recomposed, enabling both real and synthetic compositions. To enable comprehensive evaluation, we construct MICo-Bench with 100 cases per task and 300 challenging De&Re cases, and further introduce a new metric, Weighted-Ref-VIEScore, specifically tailored for MICo evaluation. Finally, we fine-tune multiple models on MICo-150K and evaluate them on MICo-Bench. The results show that MICo-150K effectively equips models without MICo capability and further enhances those with existing skills. Notably, our baseline model, Qwen-MICo, fine-tuned from Qwen-Image-Edit, matches Qwen-Image-2509 in 3-image composition while supporting arbitrary multi-image inputs beyond the latter's limitation. Our dataset, benchmark, and baseline collectively offer valuable resources for further research on Multi-Image Composition.",
-        "arxiv_id": "2512.07348",
-        "ARXIVID": "2512.07348",
-        "COMMENT": "Matches criterion 4 as it introduces a new dataset and benchmark for multi-image composition, which is relevant to vision foundation models.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.07806": {
-        "authors": [
-            "Gyeongjin Kang",
-            "Seungkwon Yang",
-            "Seungtae Nam",
-            "Younggeun Lee",
-            "Jungwoo Kim",
-            "Eunbyung Park"
-        ],
-        "title": "Multi-view Pyramid Transformer: Look Coarser to See Broader",
-        "abstract": "arXiv:2512.07806v1 Announce Type: new  Abstract: We propose Multi-view Pyramid Transformer (MVP), a scalable multi-view transformer architecture that directly reconstructs large 3D scenes from tens to hundreds of images in a single forward pass. Drawing on the idea of ``looking broader to see the whole, looking finer to see the details,\" MVP is built on two core design principles: 1) a local-to-global inter-view hierarchy that gradually broadens the model's perspective from local views to groups and ultimately the full scene, and 2) a fine-to-coarse intra-view hierarchy that starts from detailed spatial representations and progressively aggregates them into compact, information-dense tokens. This dual hierarchy achieves both computational efficiency and representational richness, enabling fast reconstruction of large and complex scenes. We validate MVP on diverse datasets and show that, when coupled with 3D Gaussian Splatting as the underlying 3D representation, it achieves state-of-the-art generalizable reconstruction quality while maintaining high efficiency and scalability across a wide range of view configurations.",
-        "arxiv_id": "2512.07806",
-        "ARXIVID": "2512.07806",
-        "COMMENT": "This paper aligns with Criterion 4 as it introduces a scalable transformer architecture for 3D scene reconstruction, which is relevant to vision foundation models and their applications.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.07831": {
-        "authors": [
-            "Jiehui Huang",
-            "Yuechen Zhang",
-            "Xu He",
-            "Yuan Gao",
-            "Zhi Cen",
-            "Bin Xia",
-            "Yan Zhou",
-            "Xin Tao",
-            "Pengfei Wan",
-            "Jiaya Jia"
-        ],
-        "title": "UnityVideo: Unified Multi-Modal Multi-Task Learning for Enhancing World-Aware Video Generation",
-        "abstract": "arXiv:2512.07831v1 Announce Type: new  Abstract: Recent video generation models demonstrate impressive synthesis capabilities but remain limited by single-modality conditioning, constraining their holistic world understanding. This stems from insufficient cross-modal interaction and limited modal diversity for comprehensive world knowledge representation. To address these limitations, we introduce UnityVideo, a unified framework for world-aware video generation that jointly learns across multiple modalities (segmentation masks, human skeletons, DensePose, optical flow, and depth maps) and training paradigms. Our approach features two core components: (1) dynamic noising to unify heterogeneous training paradigms, and (2) a modality switcher with an in-context learner that enables unified processing via modular parameters and contextual learning. We contribute a large-scale unified dataset with 1.3M samples. Through joint optimization, UnityVideo accelerates convergence and significantly enhances zero-shot generalization to unseen data. We demonstrate that UnityVideo achieves superior video quality, consistency, and improved alignment with physical world constraints. Code and data can be found at: https://github.com/dvlab-research/UnityVideo",
-        "arxiv_id": "2512.07831",
-        "ARXIVID": "2512.07831",
-        "COMMENT": "Matches criterion 6 as it focuses on video generation with multi-modal and multi-task learning, which is relevant to video understanding.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.07733": {
-        "authors": [
-            "Meng Cao",
-            "Xingyu Li",
-            "Xue Liu",
-            "Ian Reid",
-            "Xiaodan Liang"
-        ],
-        "title": "SpatialDreamer: Incentivizing Spatial Reasoning via Active Mental Imagery",
-        "abstract": "arXiv:2512.07733v1 Announce Type: new  Abstract: Despite advancements in Multi-modal Large Language Models (MLLMs) for scene understanding, their performance on complex spatial reasoning tasks requiring mental simulation remains significantly limited. Current methods often rely on passive observation of spatial data, failing to internalize an active mental imagery process. To bridge this gap, we propose SpatialDreamer, a reinforcement learning framework that enables spatial reasoning through a closedloop process of active exploration, visual imagination via a world model, and evidence-grounded reasoning. To address the lack of fine-grained reward supervision in longhorizontal reasoning tasks, we propose Geometric Policy Optimization (GeoPO), which introduces tree-structured sampling and step-level reward estimation with geometric consistency constraints. Extensive experiments demonstrate that SpatialDreamer delivers highly competitive results across multiple challenging benchmarks, signifying a critical advancement in human-like active spatial mental simulation for MLLMs.",
-        "arxiv_id": "2512.07733",
-        "ARXIVID": "2512.07733",
-        "COMMENT": "Matches criterion 1 as it proposes a framework for spatial reasoning and mental simulation, which is directly relevant to spatial intelligence in embodied agents.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.06281": {
-        "authors": [
-            "Hengzhuang Li",
-            "Xinsong Zhang",
-            "Qiming Peng",
-            "Bin Luo",
-            "Han Hu",
-            "Dengyang Jiang",
-            "Han-Jia Ye",
-            "Teng Zhang",
-            "Hai Jin"
-        ],
-        "title": "Unleashing the Intrinsic Visual Representation Capability of Multimodal Large Language Models",
-        "abstract": "arXiv:2512.06281v1 Announce Type: new  Abstract: Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in multimodal tasks. Despite their impressive performance, MLLMs suffer from the modality imbalance issue, where visual information is often underutilized compared to textual representations in deeper layers, leading to degraded visual performance or hallucinations. This issue stems from the predominant reliance on next-text-token-prediction during training, which fails to provide direct visual supervisory signals, resulting in progressive homogenization of visual representations throughout the layers. To this end, we propose Latent Visual Reconstruction (LaVer), a novel training framework that facilitates MLLMs in learning more discriminative visual representations via masked image modeling in the joint latent semantic space of LLM. Our method offers direct visual activation to MLLMs, which exhibit increased visual attention allocation, indicating enhanced utilization of visual information. Extensive experiments across diverse benchmarks prove the superiority of our approach in various scenarios, especially those requiring dense visual capabilities. Code of LaVer is available at https://github.com/Fir-lat/LaVer.",
-        "arxiv_id": "2512.06281",
-        "ARXIVID": "2512.06281",
-        "COMMENT": "Matches criterion 2 as it addresses modality imbalance in Multimodal Large Language Models (MLLMs) and proposes a novel training framework.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.06065": {
-        "authors": [
-            "Runjia Li",
-            "Moayed Haji-Ali",
-            "Ashkan Mirzaei",
-            "Chaoyang Wang",
-            "Arpit Sahni",
-            "Ivan Skorokhodov",
-            "Aliaksandr Siarohin",
-            "Tomas Jakab",
-            "Junlin Han",
-            "Sergey Tulyakov",
-            "Philip Torr",
-            "Willi Menapace"
-        ],
-        "title": "EgoEdit: Dataset, Real-Time Streaming Model, and Benchmark for Egocentric Video Editing",
-        "abstract": "arXiv:2512.06065v1 Announce Type: new  Abstract: We study instruction-guided editing of egocentric videos for interactive AR applications. While recent AI video editors perform well on third-person footage, egocentric views present unique challenges - including rapid egomotion and frequent hand-object interactions - that create a significant domain gap. Moreover, existing offline editing pipelines suffer from high latency, limiting real-time interaction. To address these issues, we present a complete ecosystem for egocentric video editing. First, we construct EgoEditData, a carefully designed and manually curated dataset specifically designed for egocentric editing scenarios, featuring rich hand-object interactions, while explicitly preserving hands. Second, we develop EgoEdit, an instruction-following egocentric video editor that supports real-time streaming inference on a single GPU. Finally, we introduce EgoEditBench, an evaluation suite targeting instruction faithfulness, hand and interaction preservation, and temporal stability under egomotion. Across both egocentric and general editing tasks, EgoEdit produces temporally stable, instruction-faithful results with interactive latency. It achieves clear gains on egocentric editing benchmarks-where existing methods struggle-while maintaining performance comparable to the strongest baselines on general editing tasks. EgoEditData and EgoEditBench will be made public for the research community. See our website at https://snap-research.github.io/EgoEdit",
-        "arxiv_id": "2512.06065",
-        "ARXIVID": "2512.06065",
-        "COMMENT": "Matches criterion 6 as it introduces a new dataset, benchmark, and method for egocentric video editing, which is a video understanding task.",
-        "RELEVANCE": 5,
-        "NOVELTY": 7
-    },
-    "2512.06258": {
-        "authors": [
-            "Chaoyang Wang",
-            "Yangfan He",
-            "Yiyang Zhou",
-            "Yixuan Wang",
-            "Jiaqi Liu",
-            "Peng Xia",
-            "Zhengzhong Tu",
-            "Mohit Bansal",
-            "Huaxiu Yao"
-        ],
-        "title": "Knowing the Answer Isn't Enough: Fixing Reasoning Path Failures in LVLMs",
-        "abstract": "arXiv:2512.06258v1 Announce Type: new  Abstract: We reveal a critical yet underexplored flaw in Large Vision-Language Models (LVLMs): even when these models know the correct answer, they frequently arrive there through incorrect reasoning paths. The core issue is not a lack of knowledge, but a path selection bias within the vast reasoning search space. Although LVLMs are often capable of sampling correct solution trajectories, they disproportionately favor unstable or logically inconsistent ones, leading to erratic and unreliable outcomes. The substantial disparity between Pass@K (with large K) and Pass@1 across numerous models provides compelling evidence that such failures primarily stem from misreasoning rather than ignorance. To systematically investigate and address this issue, we propose PSO (Path-Select Optimization), a two-stage post-training framework designed to enhance both the reasoning performance and stability of existing LVLMs. In the first stage, we employ Group Relative Policy Optimization (GRPO) with template and answer-based rewards to cultivate structured, step-by-step reasoning. In the second stage, we conduct online preference optimization, where the model samples reasoning paths from GRPO-generated data, self-evaluates them, and aligns itself toward the preferred trajectories. Incorrect or suboptimal paths are concurrently stored in a Negative Replay Memory (NRM) as hard negatives, which are periodically revisited to prevent the model from repeating prior mistakes and to facilitate continual reasoning refinement. Extensive experiments show that PSO effectively prunes invalid reasoning paths, substantially enhances reasoning accuracy (with 7.4% improvements on average), and yields more stable and consistent chains of thought. Our code will be available at https://github.com/aiming-lab/PSO.",
-        "arxiv_id": "2512.06258",
-        "ARXIVID": "2512.06258",
-        "COMMENT": "Matches criterion 2 as it addresses reasoning path failures in Large Vision-Language Models (LVLMs).",
+        "title": "Photo3D: Advancing Photorealistic 3D Generation through Structure-Aligned Detail Enhancement",
+        "abstract": "arXiv:2512.08535v1 Announce Type: new  Abstract: Although recent 3D-native generators have made great progress in synthesizing reliable geometry, they still fall short in achieving realistic appearances. A key obstacle lies in the lack of diverse and high-quality real-world 3D assets with rich texture details, since capturing such data is intrinsically difficult due to the diverse scales of scenes, non-rigid motions of objects, and the limited precision of 3D scanners. We introduce Photo3D, a framework for advancing photorealistic 3D generation, which is driven by the image data generated by the GPT-4o-Image model. Considering that the generated images can distort 3D structures due to their lack of multi-view consistency, we design a structure-aligned multi-view synthesis pipeline and construct a detail-enhanced multi-view dataset paired with 3D geometry. Building on it, we present a realistic detail enhancement scheme that leverages perceptual feature adaptation and semantic structure matching to enforce appearance consistency with realistic details while preserving the structural consistency with the 3D-native geometry. Our scheme is general to different 3D-native generators, and we present dedicated training strategies to facilitate the optimization of geometry-texture coupled and decoupled 3D-native generation paradigms. Experiments demonstrate that Photo3D generalizes well across diverse 3D-native generation paradigms and achieves state-of-the-art photorealistic 3D generation performance.",
+        "arxiv_id": "2512.08535",
+        "ARXIVID": "2512.08535",
+        "COMMENT": "Matches criterion 4 as it focuses on advancing photorealistic 3D generation, which is related to vision foundation models and their applications.",
         "RELEVANCE": 5,
         "NOVELTY": 6
     },
-    "2512.06726": {
+    "2512.08498": {
         "authors": [
-            "Shuo Li",
-            "Jiajun Sun",
-            "Zhihao Zhang",
-            "Xiaoran Fan",
-            "Senjie Jin",
-            "Hui Li",
-            "Yuming Yang",
-            "Junjie Ye",
-            "Lixing Shen",
-            "Tao Ji",
-            "Tao Gui",
-            "Qi Zhang",
-            "Xuanjing Huang"
+            "Yijia Guo",
+            "Tong Hu",
+            "Zhiwei Li",
+            "Liwen Hu",
+            "Keming Qian",
+            "Xitong Lin",
+            "Shengbo Chen",
+            "Tiejun Huang",
+            "Lei Ma"
         ],
-        "title": "The Role of Entropy in Visual Grounding: Analysis and Optimization",
-        "abstract": "arXiv:2512.06726v1 Announce Type: new  Abstract: Recent advances in fine-tuning multimodal large language models (MLLMs) using reinforcement learning have achieved remarkable progress, particularly with the introduction of various entropy control techniques. However, the role and characteristics of entropy in perception-oriented tasks like visual grounding, as well as effective strategies for controlling it, remain largely unexplored. To address this issue, we focus on the visual grounding task and analyze the role and characteristics of entropy in comparison to reasoning tasks. Building on these findings, we introduce ECVGPO (Entropy Control Visual Grounding Policy Optimization), an interpretable algorithm designed for effective entropy regulation. Through entropy control, the trade-off between exploration and exploitation is better balanced. Experiments show that ECVGPO achieves broad improvements across various benchmarks and models.",
-        "arxiv_id": "2512.06726",
-        "ARXIVID": "2512.06726",
-        "COMMENT": "Matches criterion 2 as it explores entropy control in multimodal large language models for visual grounding.",
+        "title": "On-the-fly Large-scale 3D Reconstruction from Multi-Camera Rigs",
+        "abstract": "arXiv:2512.08498v1 Announce Type: new  Abstract: Recent advances in 3D Gaussian Splatting (3DGS) have enabled efficient free-viewpoint rendering and photorealistic scene reconstruction. While on-the-fly extensions of 3DGS have shown promise for real-time reconstruction from monocular RGB streams, they often fail to achieve complete 3D coverage due to the limited field of view (FOV). Employing a multi-camera rig fundamentally addresses this limitation. In this paper, we present the first on-the-fly 3D reconstruction framework for multi-camera rigs. Our method incrementally fuses dense RGB streams from multiple overlapping cameras into a unified Gaussian representation, achieving drift-free trajectory estimation and efficient online reconstruction. We propose a hierarchical camera initialization scheme that enables coarse inter-camera alignment without calibration, followed by a lightweight multi-camera bundle adjustment that stabilizes trajectories while maintaining real-time performance. Furthermore, we introduce a redundancy-free Gaussian sampling strategy and a frequency-aware optimization scheduler to reduce the number of Gaussian primitives and the required optimization iterations, thereby maintaining both efficiency and reconstruction fidelity. Our method reconstructs hundreds of meters of 3D scenes within just 2 minutes using only raw multi-camera video streams, demonstrating unprecedented speed, robustness, and Fidelity for on-the-fly 3D scene reconstruction.",
+        "arxiv_id": "2512.08498",
+        "ARXIVID": "2512.08498",
+        "COMMENT": "Matches criterion 3 as it introduces a novel method for on-the-fly 3D reconstruction, which is relevant to embodied/robotic AI benchmarks and methods.",
         "RELEVANCE": 5,
         "NOVELTY": 6
     },
-    "2512.07166": {
+    "2512.07926": {
         "authors": [
-            "Siyuan Xu",
-            "Yibing Liu",
-            "Peilin Chen",
-            "Yung-Hui Li",
-            "Shiqi Wang",
-            "Sam Kwong"
+            "Arvind Agarwal",
+            "Lisa Amini",
+            "Sameep Mehta",
+            "Horst Samulowitz",
+            "Kavitha Srinivas"
         ],
-        "title": "When Privacy Meets Recovery: The Overlooked Half of Surrogate-Driven Privacy Preservation for MLLM Editing",
-        "abstract": "arXiv:2512.07166v1 Announce Type: new  Abstract: Privacy leakage in Multimodal Large Language Models (MLLMs) has long been an intractable problem. Existing studies, though effectively obscure private information in MLLMs, often overlook the evaluation of the authenticity and recovery quality of user privacy. To this end, this work uniquely focuses on the critical challenge of how to restore surrogate-driven protected data in diverse MLLM scenarios. We first bridge this research gap by contributing the SPPE (Surrogate Privacy Protected Editable) dataset, which includes a wide range of privacy categories and user instructions to simulate real MLLM applications. This dataset offers protected surrogates alongside their various MLLM-edited versions, thus enabling the direct assessment of privacy recovery quality. By formulating privacy recovery as a guided generation task conditioned on complementary multimodal signals, we further introduce a unified approach that reliably reconstructs private content while preserving the fidelity of MLLM-generated edits. The experiments on both SPPE and InstructPix2Pix further show that our approach generalizes well across diverse visual content and editing tasks, achieving a strong balance between privacy protection and MLLM usability.",
-        "arxiv_id": "2512.07166",
-        "ARXIVID": "2512.07166",
-        "COMMENT": "Matches criterion 2 as it focuses on privacy preservation and recovery in Multimodal Large Language Models (MLLMs).",
-        "RELEVANCE": 5,
-        "NOVELTY": 6
-    },
-    "2512.06174": {
-        "authors": [
-            "Shilin Hu",
-            "Jingyi Xu",
-            "Akshat Dave",
-            "Dimitris Samaras",
-            "Hieu Le"
-        ],
-        "title": "Physics-Grounded Shadow Generation from Monocular 3D Geometry Priors and Approximate Light Direction",
-        "abstract": "arXiv:2512.06174v1 Announce Type: new  Abstract: Shadow generation aims to produce photorealistic shadows that are visually consistent with object geometry and scene illumination. In the physics of shadow formation, the occluder blocks some light rays casting from the light source that would otherwise arrive at the surface, creating a shadow that follows the silhouette of the occluder. However, such explicit physical modeling has rarely been used in deep-learning-based shadow generation. In this paper, we propose a novel framework that embeds explicit physical modeling - geometry and illumination - into deep-learning-based shadow generation. First, given a monocular RGB image, we obtain approximate 3D geometry in the form of dense point maps and predict a single dominant light direction. These signals allow us to recover fairly accurate shadow location and shape based on the physics of shadow formation. We then integrate this physics-based initial estimate into a diffusion framework that refines the shadow into a realistic, high-fidelity appearance while ensuring consistency with scene geometry and illumination. Trained on DESOBAV2, our model produces shadows that are both visually realistic and physically coherent, outperforming existing approaches, especially in scenes with complex geometry or ambiguous lighting.",
-        "arxiv_id": "2512.06174",
-        "ARXIVID": "2512.06174",
-        "COMMENT": "This paper aligns with Criterion 4 as it focuses on a novel method for shadow generation using physics-grounded modeling, which is relevant to vision foundation models and their applications.",
-        "RELEVANCE": 5,
-        "NOVELTY": 6
-    },
-    "2512.06276": {
-        "authors": [
-            "Tianyi Gao",
-            "Hao Li",
-            "Han Fang",
-            "Xin Wei",
-            "Xiaodong Dong",
-            "Hongbo Sun",
-            "Ye Yuan",
-            "Zhongjiang He",
-            "Jinglin Xu",
-            "Jingmin Xin",
-            "Hao Sun"
-        ],
-        "title": "RefBench-PRO: Perceptual and Reasoning Oriented Benchmark for Referring Expression Comprehension",
-        "abstract": "arXiv:2512.06276v1 Announce Type: new  Abstract: Referring Expression Comprehension (REC) is a vision-language task that localizes a specific image region based on a textual description. Existing REC benchmarks primarily evaluate perceptual capabilities and lack interpretable scoring mechanisms, which cannot reveal the grounding capability of Multi-modal Large Language Model (MLLM) across different cognitive abilities. To address this limitation, we introduce RefBench-PRO, a comprehensive REC benchmark, which decomposes referring expressions into two core dimensions, i.e., perception and reasoning, and further subdivides them into six progressively challenging tasks, such as attribute, position, interaction, commonsense, relation and reject. We also develop a fully automated data-generation pipeline that produces diverse referring expressions across these six sub-dimensions. Furthermore, We propose Ref-R1, an RL-based learning scheme, which incorporates Dynamic IoU-based GRPO to improve localization accuracy under increasingly complex reasoning conditions, establishing a stronger baseline for REC. Extensive experiments demonstrate that our RefBench-PRO enables interpretable evaluation of MLLM on referring expression comprehension, presenting greater challenges in both perception and reasoning.",
-        "arxiv_id": "2512.06276",
-        "ARXIVID": "2512.06276",
-        "COMMENT": "Matches criterion 6 as it introduces a new benchmark for referring expression comprehension, which is a vision-language task related to video understanding.",
-        "RELEVANCE": 5,
-        "NOVELTY": 6
-    },
-    "2512.07141": {
-        "authors": [
-            "Fenghua Weng",
-            "Chaochao Lu",
-            "Xia Hu",
-            "Wenqi Shao",
-            "Wenjie Wang"
-        ],
-        "title": "Think-Reflect-Revise: A Policy-Guided Reflective Framework for Safety Alignment in Large Vision Language Models",
-        "abstract": "arXiv:2512.07141v1 Announce Type: new  Abstract: As multimodal reasoning improves the overall capabilities of Large Vision Language Models (LVLMs), recent studies have begun to explore safety-oriented reasoning, aiming to enhance safety awareness by analyzing potential safety risks during the reasoning process before generating the final response. Although such approaches improve safety awareness and interpretability, this single-pass think-then-answer paradigm remains vulnerable to contextual or visual jailbreak attacks. This reveals a critical flaw: single-pass reasoning may overlook explicit harmful content in its own output. Our key insight is to exploit this wasted signal through reflection, which can effectively leverage the malicious content revealed in the first-pass reasoning to enable genuine self-correction and prevent unsafe generations. Motivated by this, we propose Think-Reflect-Revise (TRR), a three-stage training framework designed to enhance the safety alignment of LVLMs through policy-guided self-reflection. We first build a Reflective Safety Reasoning (ReSafe) dataset with 5,000 examples that follow a think-reflect-revise process. We then fine-tune the target model using the ReSafe dataset to initialize reflective behavior, and finally reinforce policy-guided reflection through reinforcement learning. Experimental results show that TRR substantially improves the safety performance of LVLMs across both safety-awareness benchmarks and jailbreak attack evaluations, increasing the overall safe response rate from 42.8% to 87.7% on Qwen2.5-VL-7B, while preserving stable performance on general benchmarks such as MMMU and MMStar. The project page is available at https://think-reflect-revise.github.io/.",
-        "arxiv_id": "2512.07141",
-        "ARXIVID": "2512.07141",
-        "COMMENT": "Matches criterion 2 as it focuses on improving safety alignment in Large Vision Language Models (LVLMs), which is relevant to multimodal large language models.",
-        "RELEVANCE": 5,
-        "NOVELTY": 6
-    },
-    "2512.06179": {
-        "authors": [
-            "Shilin Hu",
-            "Jingyi Xu",
-            "Sagnik Das",
-            "Dimitris Samaras",
-            "Hieu Le"
-        ],
-        "title": "Physics-Grounded Attached Shadow Detection Using Approximate 3D Geometry and Light Direction",
-        "abstract": "arXiv:2512.06179v1 Announce Type: new  Abstract: Attached shadows occur on the surface of the occluder where light cannot reach because of self-occlusion. They are crucial for defining the three-dimensional structure of objects and enhancing scene understanding. Yet existing shadow detection methods mainly target cast shadows, and there are no dedicated datasets or models for detecting attached shadows. To address this gap, we introduce a framework that jointly detects cast and attached shadows by reasoning about their mutual relationship with scene illumination and geometry. Our system consists of a shadow detection module that predicts both shadow types separately, and a light estimation module that infers the light direction from the detected shadows. The estimated light direction, combined with surface normals, allows us to derive a geometry-consistent partial map that identifies regions likely to be self-occluded. This partial map is then fed back to refine shadow predictions, forming a closed-loop reasoning process that iteratively improves both shadow segmentation and light estimation. In order to train our method, we have constructed a dataset of 1,458 images with separate annotations for cast and attached shadows, enabling training and quantitative evaluation of both. Experimental results demonstrate that this iterative geometry-illumination reasoning substantially improves the detection of attached shadows, with at least 33% BER reduction, while maintaining strong full and cast shadow performance.",
-        "arxiv_id": "2512.06179",
-        "ARXIVID": "2512.06179",
-        "COMMENT": "Matches criterion 1 as it focuses on spatial reasoning and geometry for scene understanding, which is relevant to spatial intelligence in embodied agents.",
-        "RELEVANCE": 5,
-        "NOVELTY": 6
-    },
-    "2512.07720": {
-        "authors": [
-            "Fan Yang",
-            "Heyuan Li",
-            "Peihao Li",
-            "Weihao Yuan",
-            "Lingteng Qiu",
-            "Chaoyue Song",
-            "Cheng Chen",
-            "Yisheng He",
-            "Shifeng Zhang",
-            "Xiaoguang Han",
-            "Steven Hoi",
-            "Guosheng Lin"
-        ],
-        "title": "ViSA: 3D-Aware Video Shading for Real-Time Upper-Body Avatar Creation",
-        "abstract": "arXiv:2512.07720v1 Announce Type: new  Abstract: Generating high-fidelity upper-body 3D avatars from one-shot input image remains a significant challenge. Current 3D avatar generation methods, which rely on large reconstruction models, are fast and capable of producing stable body structures, but they often suffer from artifacts such as blurry textures and stiff, unnatural motion. In contrast, generative video models show promising performance by synthesizing photorealistic and dynamic results, but they frequently struggle with unstable behavior, including body structural errors and identity drift. To address these limitations, we propose a novel approach that combines the strengths of both paradigms. Our framework employs a 3D reconstruction model to provide robust structural and appearance priors, which in turn guides a real-time autoregressive video diffusion model for rendering. This process enables the model to synthesize high-frequency, photorealistic details and fluid dynamics in real time, effectively reducing texture blur and motion stiffness while preventing the structural inconsistencies common in video generation methods. By uniting the geometric stability of 3D reconstruction with the generative capabilities of video models, our method produces high-fidelity digital avatars with realistic appearance and dynamic, temporally coherent motion. Experiments demonstrate that our approach significantly reduces artifacts and achieves substantial improvements in visual quality over leading methods, providing a robust and efficient solution for real-time applications such as gaming and virtual reality. Project page: https://lhyfst.github.io/visa",
-        "arxiv_id": "2512.07720",
-        "ARXIVID": "2512.07720",
-        "COMMENT": "Does not match any specific criteria but is related to avatar generation and video synthesis.",
+        "title": "Can AI autonomously build, operate, and use the entire data stack?",
+        "abstract": "arXiv:2512.07926v1 Announce Type: new  Abstract: Enterprise data management is a monumental task. It spans data architecture and systems, integration, quality, governance, and continuous improvement. While AI assistants can help specific persona, such as data engineers and stewards, to navigate and configure the data stack, they fall far short of full automation. However, as AI becomes increasingly capable of tackling tasks that have previously resisted automation due to inherent complexities, we believe there is an imminent opportunity to target fully autonomous data estates. Currently, AI is used in different parts of the data stack, but in this paper, we argue for a paradigm shift from the use of AI in independent data component operations towards a more holistic and autonomous handling of the entire data lifecycle. Towards that end, we explore how each stage of the modern data stack can be autonomously managed by intelligent agents to build self-sufficient systems that can be used not only by human end-users, but also by AI itself. We begin by describing the mounting forces and opportunities that demand this paradigm shift, examine how agents can streamline the data lifecycle, and highlight open questions and areas where additional research is needed. We hope this work will inspire lively debate, stimulate further research, motivate collaborative approaches, and facilitate a more autonomous future for data systems.",
+        "arxiv_id": "2512.07926",
+        "ARXIVID": "2512.07926",
+        "COMMENT": "This paper does not match any of the specific criteria. It focuses on autonomous data management and intelligent agents for the data stack, which is outside the scope of the listed topics.",
         "RELEVANCE": 3,
         "NOVELTY": 6
     },
-    "2512.06205": {
+    "2512.07993": {
         "authors": [
-            "Daniel Quigley",
-            "Eric Maynard"
+            "Jiayi Tian",
+            "Seyedarmin Azizi",
+            "Yequan Zhao",
+            "Erfan Baghaei Potraghloo",
+            "Sean McPherson",
+            "Sharath Nittur Sridhar",
+            "Zhengyang Wang",
+            "Zheng Zhang",
+            "Massoud Pedram",
+            "Souvik Kundu"
         ],
-        "title": "On measuring grounding and generalizing grounding problems",
-        "abstract": "arXiv:2512.06205v1 Announce Type: new  Abstract: The symbol grounding problem asks how tokens like cat can be about cats, as opposed to mere shapes manipulated in a calculus. We recast grounding from a binary judgment into an audit across desiderata, each indexed by an evaluation tuple (context, meaning type, threat model, reference distribution): authenticity (mechanisms reside inside the agent and, for strong claims, were acquired through learning or evolution); preservation (atomic meanings remain intact); faithfulness, both correlational (realized meanings match intended ones) and etiological (internal mechanisms causally contribute to success); robustness (graceful degradation under declared perturbations); compositionality (the whole is built systematically from the parts). We apply this framework to four grounding modes (symbolic; referential; vectorial; relational) and three case studies: model-theoretic semantics achieves exact composition but lacks etiological warrant; large language models show correlational fit and local robustness for linguistic tasks, yet lack selection-for-success on world tasks without grounded interaction; human language meets the desiderata under strong authenticity through evolutionary and developmental acquisition. By operationalizing a philosophical inquiry about representation, we equip philosophers of science, computer scientists, linguists, and mathematicians with a common language and technical framework for systematic investigation of grounding and meaning.",
-        "arxiv_id": "2512.06205",
-        "ARXIVID": "2512.06205",
-        "COMMENT": "This paper does not directly match any specific criteria but discusses grounding problems and evaluation frameworks, which could be tangentially related to spatial intelligence and embodied agents.",
-        "RELEVANCE": 3,
-        "NOVELTY": 6
-    },
-    "2512.07345": {
-        "authors": [
-            "Shilong Jin",
-            "Haoran Duan",
-            "Litao Hua",
-            "Wentao Huang",
-            "Yuan Zhou"
-        ],
-        "title": "Debiasing Diffusion Priors via 3D Attention for Consistent Gaussian Splatting",
-        "abstract": "arXiv:2512.07345v1 Announce Type: new  Abstract: Versatile 3D tasks (e.g., generation or editing) that distill from Text-to-Image (T2I) diffusion models have attracted significant research interest for not relying on extensive 3D training data. However, T2I models exhibit limitations resulting from prior view bias, which produces conflicting appearances between different views of an object. This bias causes subject-words to preferentially activate prior view features during cross-attention (CA) computation, regardless of the target view condition. To overcome this limitation, we conduct a comprehensive mathematical analysis to reveal the root cause of the prior view bias in T2I models. Moreover, we find different UNet layers show different effects of prior view in CA. Therefore, we propose a novel framework, TD-Attn, which addresses multi-view inconsistency via two key components: (1) the 3D-Aware Attention Guidance Module (3D-AAG) constructs a view-consistent 3D attention Gaussian for subject-words to enforce spatial consistency across attention-focused regions, thereby compensating for the limited spatial information in 2D individual view CA maps; (2) the Hierarchical Attention Modulation Module (HAM) utilizes a Semantic Guidance Tree (SGT) to direct the Semantic Response Profiler (SRP) in localizing and modulating CA layers that are highly responsive to view conditions, where the enhanced CA maps further support the construction of more consistent 3D attention Gaussians. Notably, HAM facilitates semantic-specific interventions, enabling controllable and precise 3D editing. Extensive experiments firmly establish that TD-Attn has the potential to serve as a universal plugin, significantly enhancing multi-view consistency across 3D tasks.",
-        "arxiv_id": "2512.07345",
-        "ARXIVID": "2512.07345",
-        "COMMENT": "Does not match any specific criterion but is generally relevant to computer vision and 3D modeling.",
-        "RELEVANCE": 3,
-        "NOVELTY": 6
-    },
-    "2512.06438": {
-        "authors": [
-            "Ramazan Fazylov",
-            "Sergey Zagoruyko",
-            "Aleksandr Parkin",
-            "Stamatis Lefkimmiatis",
-            "Ivan Laptev"
-        ],
-        "title": "AGORA: Adversarial Generation Of Real-time Animatable 3D Gaussian Head Avatars",
-        "abstract": "arXiv:2512.06438v1 Announce Type: new  Abstract: The generation of high-fidelity, animatable 3D human avatars remains a core challenge in computer graphics and vision, with applications in VR, telepresence, and entertainment. Existing approaches based on implicit representations like NeRFs suffer from slow rendering and dynamic inconsistencies, while 3D Gaussian Splatting (3DGS) methods are typically limited to static head generation, lacking dynamic control. We bridge this gap by introducing AGORA, a novel framework that extends 3DGS within a generative adversarial network to produce animatable avatars. Our key contribution is a lightweight, FLAME-conditioned deformation branch that predicts per-Gaussian residuals, enabling identity-preserving, fine-grained expression control while allowing real-time inference. Expression fidelity is enforced via a dual-discriminator training scheme leveraging synthetic renderings of the parametric mesh. AGORA generates avatars that are not only visually realistic but also precisely controllable. Quantitatively, we outperform state-of-the-art NeRF-based methods on expression accuracy while rendering at 250+ FPS on a single GPU, and, notably, at $\\sim$9 FPS under CPU-only inference - representing, to our knowledge, the first demonstration of practical CPU-only animatable 3DGS avatar synthesis. This work represents a significant step toward practical, high-performance digital humans. Project website: https://ramazan793.github.io/AGORA/",
-        "arxiv_id": "2512.06438",
-        "ARXIVID": "2512.06438",
-        "COMMENT": "Does not match any specific criterion but is generally relevant to computer vision and generative modeling.",
-        "RELEVANCE": 3,
-        "NOVELTY": 6
-    },
-    "2512.06421": {
-        "authors": [
-            "Gengze Zhou",
-            "Chongjian Ge",
-            "Hao Tan",
-            "Feng Liu",
-            "Yicong Hong"
-        ],
-        "title": "Rethinking Training Dynamics in Scale-wise Autoregressive Generation",
-        "abstract": "arXiv:2512.06421v1 Announce Type: new  Abstract: Recent advances in autoregressive (AR) generative models have produced increasingly powerful systems for media synthesis. Among them, next-scale prediction has emerged as a popular paradigm, where models generate images in a coarse-to-fine manner. However, scale-wise AR models suffer from exposure bias, which undermines generation quality. We identify two primary causes of this issue: (1) train-test mismatch, where the model must rely on its own imperfect predictions during inference, and (2) imbalance in scale-wise learning difficulty, where certain scales exhibit disproportionately higher optimization complexity. Through a comprehensive analysis of training dynamics, we propose Self-Autoregressive Refinement (SAR) to address these limitations. SAR introduces a Stagger-Scale Rollout (SSR) mechanism that performs lightweight autoregressive rollouts to expose the model to its own intermediate predictions, thereby aligning train-test patterns, and a complementary Contrastive Student-Forcing Loss (CSFL) that provides adequate supervision for self-generated contexts to ensure stable training. Experimental results show that applying SAR to pretrained AR models consistently improves generation quality with minimal computational overhead. For instance, SAR yields a 5.2% FID reduction on FlexVAR-d16 trained on ImageNet 256 within 10 epochs (5 hours on 32xA100 GPUs). Given its efficiency, scalability, and effectiveness, we expect SAR to serve as a reliable post-training method for visual autoregressive generation.",
-        "arxiv_id": "2512.06421",
-        "ARXIVID": "2512.06421",
-        "COMMENT": "Does not match any specific criteria but is related to autoregressive generative models and training dynamics.",
-        "RELEVANCE": 3,
-        "NOVELTY": 6
-    },
-    "2512.07628": {
-        "authors": [
-            "Zhiqi Li",
-            "Wenhuan Li",
-            "Tengfei Wang",
-            "Zhenwei Wang",
-            "Junta Wu",
-            "Haoyuan Wang",
-            "Yunhan Yang",
-            "Zehuan Huang",
-            "Yang Li",
-            "Peidong Liu",
-            "Chunchao Guo"
-        ],
-        "title": "MoCA: Mixture-of-Components Attention for Scalable Compositional 3D Generation",
-        "abstract": "arXiv:2512.07628v1 Announce Type: new  Abstract: Compositionality is critical for 3D object and scene generation, but existing part-aware 3D generation methods suffer from poor scalability due to quadratic global attention costs when increasing the number of components. In this work, we present MoCA, a compositional 3D generative model with two key designs: (1) importance-based component routing that selects top-k relevant components for sparse global attention, and (2) unimportant components compression that preserve contextual priors of unselected components while reducing computational complexity of global attention. With these designs, MoCA enables efficient, fine-grained compositional 3D asset creation with scalable number of components. Extensive experiments show MoCA outperforms baselines on both compositional object and scene generation tasks. Project page: https://lizhiqi49.github.io/MoCA",
-        "arxiv_id": "2512.07628",
-        "ARXIVID": "2512.07628",
-        "COMMENT": "Does not match any specific criteria but is related to generative modeling in 3D compositional generation.",
-        "RELEVANCE": 3,
-        "NOVELTY": 6
-    },
-    "2512.07834": {
-        "authors": [
-            "Yi-Chuan Huang",
-            "Jiewen Chan",
-            "Hao-Jen Chien",
-            "Yu-Lun Liu"
-        ],
-        "title": "Voxify3D: Pixel Art Meets Volumetric Rendering",
-        "abstract": "arXiv:2512.07834v1 Announce Type: new  Abstract: Voxel art is a distinctive stylization widely used in games and digital media, yet automated generation from 3D meshes remains challenging due to conflicting requirements of geometric abstraction, semantic preservation, and discrete color coherence. Existing methods either over-simplify geometry or fail to achieve the pixel-precise, palette-constrained aesthetics of voxel art. We introduce Voxify3D, a differentiable two-stage framework bridging 3D mesh optimization with 2D pixel art supervision. Our core innovation lies in the synergistic integration of three components: (1) orthographic pixel art supervision that eliminates perspective distortion for precise voxel-pixel alignment; (2) patch-based CLIP alignment that preserves semantics across discretization levels; (3) palette-constrained Gumbel-Softmax quantization enabling differentiable optimization over discrete color spaces with controllable palette strategies. This integration addresses fundamental challenges: semantic preservation under extreme discretization, pixel-art aesthetics through volumetric rendering, and end-to-end discrete optimization. Experiments show superior performance (37.12 CLIP-IQA, 77.90\\% user preference) across diverse characters and controllable abstraction (2-8 colors, 20x-50x resolutions). Project page: https://yichuanh.github.io/Voxify-3D/",
-        "arxiv_id": "2512.07834",
-        "ARXIVID": "2512.07834",
-        "COMMENT": "Does not match any specific criteria but is related to voxel art and volumetric rendering.",
+        "title": "SkipKV: Selective Skipping of KV Generation and Storage for Efficient Inference with Large Reasoning Models",
+        "abstract": "arXiv:2512.07993v1 Announce Type: new  Abstract: Large reasoning models (LRMs) often cost significant key-value (KV) cache overhead, due to their linear growth with the verbose chain-of-thought (CoT) reasoning process. This costs both memory and throughput bottleneck limiting their efficient deployment. Towards reducing KV cache size during inference, we first investigate the effectiveness of existing KV cache eviction methods for CoT reasoning. Interestingly, we find that due to unstable token-wise scoring and the reduced effective KV budget caused by padding tokens, state-of-the-art (SoTA) eviction methods fail to maintain accuracy in the multi-batch setting. Additionally, these methods often generate longer sequences than the original model, as semantic-unaware token-wise eviction leads to repeated revalidation during reasoning. To address these issues, we present \\textbf{SkipKV}, a \\textbf{\\textit{training-free}} KV compression method for selective \\textit{eviction} and \\textit{generation} operating at a coarse-grained sentence-level sequence removal for efficient CoT reasoning. In specific, it introduces a \\textit{sentence-scoring metric} to identify and remove highly similar sentences while maintaining semantic coherence. To suppress redundant generation, SkipKV dynamically adjusts a steering vector to update the hidden activation states during inference enforcing the LRM to generate concise response. Extensive evaluations on multiple reasoning benchmarks demonstrate the effectiveness of SkipKV in maintaining up to $\\mathbf{26.7}\\%$ improved accuracy compared to the alternatives, at a similar compression budget. Additionally, compared to SoTA, SkipKV yields up to $\\mathbf{1.6}\\times$ fewer generation length while improving throughput up to $\\mathbf{1.7}\\times$.",
+        "arxiv_id": "2512.07993",
+        "ARXIVID": "2512.07993",
+        "COMMENT": "Does not match any specific criterion but discusses efficient inference techniques for large reasoning models, which may be of tangential interest.",
         "RELEVANCE": 3,
         "NOVELTY": 5
     },
-    "2512.07426": {
+    "2512.08609": {
         "authors": [
-            "Karel Moens",
-            "Matthew B. Blaschko",
-            "Tinne Tuytelaars",
-            "Bart Diricx",
-            "Jonas De Vylder",
-            "Mustafa Yousif"
+            "Hui Wang",
+            "Yang Liu",
+            "Xiaoyu Zhang",
+            "Chaoxu Mu"
         ],
-        "title": "When normalization hallucinates: unseen risks in AI-powered whole slide image processing",
-        "abstract": "arXiv:2512.07426v1 Announce Type: new  Abstract: Whole slide image (WSI) normalization remains a vital preprocessing step in computational pathology. Increasingly driven by deep learning, these models learn to approximate data distributions from training examples. This often results in outputs that gravitate toward the average, potentially masking diagnostically important features. More critically, they can introduce hallucinated content, artifacts that appear realistic but are not present in the original tissue, posing a serious threat to downstream analysis. These hallucinations are nearly impossible to detect visually, and current evaluation practices often overlook them. In this work, we demonstrate that the risk of hallucinations is real and underappreciated. While many methods perform adequately on public datasets, we observe a concerning frequency of hallucinations when these same models are retrained and evaluated on real-world clinical data. To address this, we propose a novel image comparison measure designed to automatically detect hallucinations in normalized outputs. Using this measure, we systematically evaluate several well-cited normalization methods retrained on real-world data, revealing significant inconsistencies and failures that are not captured by conventional metrics. Our findings underscore the need for more robust, interpretable normalization techniques and stricter validation protocols in clinical deployment.",
-        "arxiv_id": "2512.07426",
-        "ARXIVID": "2512.07426",
-        "COMMENT": "Does not match any specific criteria but discusses risks in AI-powered image processing.",
+        "title": "CogMCTS: A Novel Cognitive-Guided Monte Carlo Tree Search Framework for Iterative Heuristic Evolution with Large Language Models",
+        "abstract": "arXiv:2512.08609v1 Announce Type: new  Abstract: Automatic Heuristic Design (AHD) is an effective1 framework for solving complex optimization prob-2 lems. The development of large language mod-3 els (LLMs) enables the automated generation of4 heuristics. Existing LLM-based evolutionary meth-5 ods rely on population strategies and are prone6 to local optima. Integrating LLMs with Monte7 Carlo Tree Search (MCTS) improves the trade-off8 between exploration and exploitation, but multi-9 round cognitive integration remains limited and10 search diversity is constrained. To overcome these11 limitations, this paper proposes a novel cognitive-12 guided MCTS framework (CogMCTS). CogMCTS13 tightly integrates the cognitive guidance mecha-14 nism of LLMs with MCTS to achieve efficient au-15 tomated heuristic optimization. The framework16 employs multi-round cognitive feedback to incor-17 porate historical experience, node information, and18 negative outcomes, dynamically improving heuris-19 tic generation. Dual-track node expansion com-20 bined with elite heuristic management balances the21 exploration of diverse heuristics and the exploita-22 tion of high-quality experience. In addition, strate-23 gic mutation modifies the heuristic forms and pa-24 rameters to further enhance the diversity of the so-25 lution and the overall optimization performance.26 The experimental results indicate that CogMCTS27 outperforms existing LLM-based AHD methods in28 stability, efficiency, and solution quality.",
+        "arxiv_id": "2512.08609",
+        "ARXIVID": "2512.08609",
+        "COMMENT": "Does not match any specific criterion but is generally relevant to optimization and heuristic design, which may be of tangential interest.",
         "RELEVANCE": 3,
         "NOVELTY": 5
     },
-    "2512.06818": {
+    "2512.08477": {
         "authors": [
-            "Jan Held",
-            "Sanghyun Son",
-            "Renaud Vandeghen",
-            "Daniel Rebain",
-            "Matheus Gadelha",
-            "Yi Zhou",
-            "Anthony Cioppa",
-            "Ming C. Lin",
-            "Marc Van Droogenbroeck",
-            "Andrea Tagliasacchi"
+            "Huiguo He",
+            "Pengyu Yan",
+            "Ziqi Yi",
+            "Weizhi Zhong",
+            "Zheng Liu",
+            "Yejun Tang",
+            "Huan Yang",
+            "Kun Gai",
+            "Guanbin Li",
+            "Lianwen Jin"
         ],
-        "title": "MeshSplatting: Differentiable Rendering with Opaque Meshes",
-        "abstract": "arXiv:2512.06818v1 Announce Type: new  Abstract: Primitive-based splatting methods like 3D Gaussian Splatting have revolutionized novel view synthesis with real-time rendering. However, their point-based representations remain incompatible with mesh-based pipelines that power AR/VR and game engines. We present MeshSplatting, a mesh-based reconstruction approach that jointly optimizes geometry and appearance through differentiable rendering. By enforcing connectivity via restricted Delaunay triangulation and refining surface consistency, MeshSplatting creates end-to-end smooth, visually high-quality meshes that render efficiently in real-time 3D engines. On Mip-NeRF360, it boosts PSNR by +0.69 dB over the current state-of-the-art MiLo for mesh-based novel view synthesis, while training 2x faster and using 2x less memory, bridging neural rendering and interactive 3D graphics for seamless real-time scene interaction. The project page is available at https://meshsplatting.github.io/.",
-        "arxiv_id": "2512.06818",
-        "ARXIVID": "2512.06818",
-        "COMMENT": "Does not match any specific criteria but is related to 3D rendering and neural graphics.",
+        "title": "ContextDrag: Precise Drag-Based Image Editing via Context-Preserving Token Injection and Position-Consistent Attention",
+        "abstract": "arXiv:2512.08477v1 Announce Type: new  Abstract: Drag-based image editing aims to modify visual content followed by user-specified drag operations. Despite existing methods having made notable progress, they still fail to fully exploit the contextual information in the reference image, including fine-grained texture details, leading to edits with limited coherence and fidelity. To address this challenge, we introduce ContextDrag, a new paradigm for drag-based editing that leverages the strong contextual modeling capability of editing models, such as FLUX-Kontext. By incorporating VAE-encoded features from the reference image, ContextDrag can leverage rich contextual cues and preserve fine-grained details, without the need for finetuning or inversion. Specifically, ContextDrag introduced a novel Context-preserving Token Injection (CTI) that injects noise-free reference features into their correct destination locations via a Latent-space Reverse Mapping (LRM) algorithm. This strategy enables precise drag control while preserving consistency in both semantics and texture details. Second, ContextDrag adopts a novel Position-Consistent Attention (PCA), which positional re-encodes the reference tokens and applies overlap-aware masking to eliminate interference from irrelevant reference features. Extensive experiments on DragBench-SR and DragBench-DR demonstrate that our approach surpasses all existing SOTA methods. Code will be publicly available.",
+        "arxiv_id": "2512.08477",
+        "ARXIVID": "2512.08477",
+        "COMMENT": "Does not closely match any specific criterion but is generally relevant to your friend's interest in vision and machine learning.",
         "RELEVANCE": 3,
         "NOVELTY": 5
     },
-    "2512.07126": {
+    "2512.08560": {
         "authors": [
-            "Shengjie Lu",
-            "Zhibin Wan",
-            "Jiejie Liu",
-            "Quan Zhang",
-            "Mingjie Sun"
+            "Navve Wasserman",
+            "Matias Cosarinsky",
+            "Yuval Golbari",
+            "Aude Oliva",
+            "Antonio Torralba",
+            "Tamar Rott Shaham",
+            "Michal Irani"
         ],
-        "title": "Training-free Clothing Region of Interest Self-correction for Virtual Try-On",
-        "abstract": "arXiv:2512.07126v1 Announce Type: new  Abstract: VTON (Virtual Try-ON) aims at synthesizing the target clothing on a certain person, preserving the details of the target clothing while keeping the rest of the person unchanged. Existing methods suffer from the discrepancies between the generated clothing results and the target ones, in terms of the patterns, textures and boundaries. Therefore, we propose to use an energy function to impose constraints on the attention map extracted through the generation process. Thus, at each generation step, the attention can be more focused on the clothing region of interest, thereby influencing the generation results to be more consistent with the target clothing details. Furthermore, to address the limitation that existing evaluation metrics concentrate solely on image realism and overlook the alignment with target elements, we design a new metric, Virtual Try-on Inception Distance (VTID), to bridge this gap and ensure a more comprehensive assessment. On the VITON-HD and DressCode datasets, our approach has outperformed the previous state-of-the-art (SOTA) methods by 1.4%, 2.3%, 12.3%, and 5.8% in the traditional metrics of LPIPS, FID, KID, and the new VTID metrics, respectively. Additionally, by applying the generated data to downstream Clothing-Change Re-identification (CC-Reid) methods, we have achieved performance improvements of 2.5%, 1.1%, and 1.6% on the LTCC, PRCC, VC-Clothes datasets in the metrics of Rank-1. The code of our method is public at https://github.com/MrWhiteSmall/CSC-VTON.git.",
-        "arxiv_id": "2512.07126",
-        "ARXIVID": "2512.07126",
-        "COMMENT": "This paper does not match any specific criteria but focuses on virtual try-on and clothing region self-correction, which is tangentially related to computer vision applications.",
+        "title": "BrainExplore: Large-Scale Discovery of Interpretable Visual Representations in the Human Brain",
+        "abstract": "arXiv:2512.08560v1 Announce Type: new  Abstract: Understanding how the human brain represents visual concepts, and in which brain regions these representations are encoded, remains a long-standing challenge. Decades of work have advanced our understanding of visual representations, yet brain signals remain large and complex, and the space of possible visual concepts is vast. As a result, most studies remain small-scale, rely on manual inspection, focus on specific regions and properties, and rarely include systematic validation. We present a large-scale, automated framework for discovering and explaining visual representations across the human cortex. Our method comprises two main stages. First, we discover candidate interpretable patterns in fMRI activity through unsupervised, data-driven decomposition methods. Next, we explain each pattern by identifying the set of natural images that most strongly elicit it and generating a natural-language description of their shared visual meaning. To scale this process, we introduce an automated pipeline that tests multiple candidate explanations, assigns quantitative reliability scores, and selects the most consistent description for each voxel pattern. Our framework reveals thousands of interpretable patterns spanning many distinct visual concepts, including fine-grained representations previously unreported.",
+        "arxiv_id": "2512.08560",
+        "ARXIVID": "2512.08560",
+        "COMMENT": "Does not closely match any specific criterion but is generally relevant to your friend's interest in vision and machine learning.",
         "RELEVANCE": 3,
         "NOVELTY": 5
     },
-    "2512.07052": {
+    "2512.08769": {
         "authors": [
-            "Hoang-Nhat Tran",
-            "Francesco Di Sario",
-            "Gabriele Spadaro",
-            "Giuseppe Valenzise",
-            "Enzo Tartaglione"
+            "Eranga Bandara",
+            "Ross Gore",
+            "Peter Foytik",
+            "Sachin Shetty",
+            "Ravi Mukkamala",
+            "Abdul Rahman",
+            "Xueping Liang",
+            "Safdar H. Bouk",
+            "Amin Hass",
+            "Sachini Rajapakse",
+            "Ng Wee Keong",
+            "Kasun De Zoysa",
+            "Aruna Withanage",
+            "Nilaan Loganathan"
         ],
-        "title": "RAVE: Rate-Adaptive Visual Encoding for 3D Gaussian Splatting",
-        "abstract": "arXiv:2512.07052v1 Announce Type: new  Abstract: Recent advances in neural scene representations have transformed immersive multimedia, with 3D Gaussian Splatting (3DGS) enabling real-time photorealistic rendering. Despite its efficiency, 3DGS suffers from large memory requirements and costly training procedures, motivating efforts toward compression. Existing approaches, however, operate at fixed rates, limiting adaptability to varying bandwidth and device constraints. In this work, we propose a flexible compression scheme for 3DGS that supports interpolation at any rate between predefined bounds. Our method is computationally lightweight, requires no retraining for any rate, and preserves rendering quality across a broad range of operating points. Experiments demonstrate that the approach achieves efficient, high-quality compression while offering dynamic rate control, making it suitable for practical deployment in immersive applications. The code will be provided open-source upon acceptance of the work.",
-        "arxiv_id": "2512.07052",
-        "ARXIVID": "2512.07052",
-        "COMMENT": "This paper does not match any specific criteria but focuses on compression for 3D Gaussian Splatting, which is tangentially related to computer vision applications.",
+        "title": "A Practical Guide for Designing, Developing, and Deploying Production-Grade Agentic AI Workflows",
+        "abstract": "arXiv:2512.08769v1 Announce Type: new  Abstract: Agentic AI marks a major shift in how autonomous systems reason, plan, and execute multi-step tasks. Unlike traditional single model prompting, agentic workflows integrate multiple specialized agents with different Large Language Models(LLMs), tool-augmented capabilities, orchestration logic, and external system interactions to form dynamic pipelines capable of autonomous decision-making and action. As adoption accelerates across industry and research, organizations face a central challenge: how to design, engineer, and operate production-grade agentic AI workflows that are reliable, observable, maintainable, and aligned with safety and governance requirements. This paper provides a practical, end-to-end guide for designing, developing, and deploying production-quality agentic AI systems. We introduce a structured engineering lifecycle encompassing workflow decomposition, multi-agent design patterns, Model Context Protocol(MCP), and tool integration, deterministic orchestration, Responsible-AI considerations, and environment-aware deployment strategies. We then present nine core best practices for engineering production-grade agentic AI workflows, including tool-first design over MCP, pure-function invocation, single-tool and single-responsibility agents, externalized prompt management, Responsible-AI-aligned model-consortium design, clean separation between workflow logic and MCP servers, containerized deployment for scalable operations, and adherence to the Keep it Simple, Stupid (KISS) principle to maintain simplicity and robustness. To demonstrate these principles in practice, we present a comprehensive case study: a multimodal news-analysis and media-generation workflow. By combining architectural guidance, operational patterns, and practical implementation insights, this paper offers a foundational reference to build robust, extensible, and production-ready agentic AI workflows.",
+        "arxiv_id": "2512.08769",
+        "ARXIVID": "2512.08769",
+        "COMMENT": "Does not match any specific criterion but provides a practical guide for agentic AI workflows, which may be of tangential interest.",
         "RELEVANCE": 3,
-        "NOVELTY": 5
-    },
-    "2512.07351": {
-        "authors": [
-            "Sayeem Been Zaman",
-            "Wasimul Karim",
-            "Arefin Ittesafun Abian",
-            "Reem E. Mohamed",
-            "Md Rafiqul Islam",
-            "Asif Karim",
-            "Sami Azam"
-        ],
-        "title": "DeepAgent: A Dual Stream Multi Agent Fusion for Robust Multimodal Deepfake Detection",
-        "abstract": "arXiv:2512.07351v1 Announce Type: new  Abstract: The increasing use of synthetic media, particularly deepfakes, is an emerging challenge for digital content verification. Although recent studies use both audio and visual information, most integrate these cues within a single model, which remains vulnerable to modality mismatches, noise, and manipulation. To address this gap, we propose DeepAgent, an advanced multi-agent collaboration framework that simultaneously incorporates both visual and audio modalities for the effective detection of deepfakes. DeepAgent consists of two complementary agents. Agent-1 examines each video with a streamlined AlexNet-based CNN to identify the symbols of deepfake manipulation, while Agent-2 detects audio-visual inconsistencies by combining acoustic features, audio transcriptions from Whisper, and frame-reading sequences of images through EasyOCR. Their decisions are fused through a Random Forest meta-classifier that improves final performance by taking advantage of the different decision boundaries learned by each agent. This study evaluates the proposed framework using three benchmark datasets to demonstrate both component-level and fused performance. Agent-1 achieves a test accuracy of 94.35% on the combined Celeb-DF and FakeAVCeleb datasets. On the FakeAVCeleb dataset, Agent-2 and the final meta-classifier attain accuracies of 93.69% and 81.56%, respectively. In addition, cross-dataset validation on DeepFakeTIMIT confirms the robustness of the meta-classifier, which achieves a final accuracy of 97.49%, and indicates a strong capability across diverse datasets. These findings confirm that hierarchy-based fusion enhances robustness by mitigating the weaknesses of individual modalities and demonstrate the effectiveness of a multi-agent approach in addressing diverse types of manipulations in deepfakes.",
-        "arxiv_id": "2512.07351",
-        "ARXIVID": "2512.07351",
-        "COMMENT": "This paper does not match any specific criteria but focuses on multimodal deepfake detection, which is tangentially related to vision and multimodal learning.",
-        "RELEVANCE": 3,
-        "NOVELTY": 5
-    },
-    "2512.06105": {
-        "authors": [
-            "Junwen Zheng",
-            "Xinran Xu",
-            "Li Rong Wang",
-            "Chang Cai",
-            "Lucinda Siyun Tan",
-            "Dingyuan Wang",
-            "Hong Liang Tey",
-            "Xiuyi Fan"
-        ],
-        "title": "Explainable Melanoma Diagnosis with Contrastive Learning and LLM-based Report Generation",
-        "abstract": "arXiv:2512.06105v1 Announce Type: new  Abstract: Deep learning has demonstrated expert-level performance in melanoma classification, positioning it as a powerful tool in clinical dermatology. However, model opacity and the lack of interpretability remain critical barriers to clinical adoption, as clinicians often struggle to trust the decision-making processes of black-box models. To address this gap, we present a Cross-modal Explainable Framework for Melanoma (CEFM) that leverages contrastive learning as the core mechanism for achieving interpretability. Specifically, CEFM maps clinical criteria for melanoma diagnosis-namely Asymmetry, Border, and Color (ABC)-into the Vision Transformer embedding space using dual projection heads, thereby aligning clinical semantics with visual features. The aligned representations are subsequently translated into structured textual explanations via natural language generation, creating a transparent link between raw image data and clinical interpretation. Experiments on public datasets demonstrate 92.79% accuracy and an AUC of 0.961, along with significant improvements across multiple interpretability metrics. Qualitative analyses further show that the spatial arrangement of the learned embeddings aligns with clinicians' application of the ABC rule, effectively bridging the gap between high-performance classification and clinical trust.",
-        "arxiv_id": "2512.06105",
-        "ARXIVID": "2512.06105",
-        "COMMENT": "Does not match any specific criterion but is generally relevant to computer vision and explainable AI.",
-        "RELEVANCE": 3,
-        "NOVELTY": 5
-    },
-    "2512.06377": {
-        "authors": [
-            "Yi Huo",
-            "Yun Ge"
-        ],
-        "title": "VAD-Net: Multidimensional Facial Expression Recognition in Intelligent Education System",
-        "abstract": "arXiv:2512.06377v1 Announce Type: new  Abstract: Current FER (Facial Expression Recognition) dataset is mostly labeled by emotion categories, such as happy, angry, sad, fear, disgust, surprise, and neutral which are limited in expressiveness. However, future affective computing requires more comprehensive and precise emotion metrics which could be measured by VAD(Valence-Arousal-Dominance) multidimension parameters. To address this, AffectNet has tried to add VA (Valence and Arousal) information, but still lacks D(Dominance). Thus, the research introduces VAD annotation on FER2013 dataset, takes the initiative to label D(Dominance) dimension. Then, to further improve network capacity, it enforces orthogonalized convolution on it, which extracts more diverse and expressive features and will finally increase the prediction accuracy. Experiment results show that D dimension could be measured but is difficult to obtain compared with V and A dimension no matter in manual annotation or regression network prediction. Secondly, the ablation test by introducing orthogonal convolution verifies that better VAD prediction could be obtained in the configuration of orthogonal convolution. Therefore, the research provides an initiative labelling for D dimension on FER dataset, and proposes a better prediction network for VAD prediction through orthogonal convolution. The newly built VAD annotated FER2013 dataset could act as a benchmark to measure VAD multidimensional emotions, while the orthogonalized regression network based on ResNet could act as the facial expression recognition baseline for VAD emotion prediction. The newly labeled dataset and implementation code is publicly available on https://github.com/YeeHoran/VAD-Net .",
-        "arxiv_id": "2512.06377",
-        "ARXIVID": "2512.06377",
-        "COMMENT": "Does not match any specific criteria but is related to facial expression recognition and multidimensional emotion metrics.",
-        "RELEVANCE": 3,
-        "NOVELTY": 5
-    },
-    "2512.05993": {
-        "authors": [
-            "Ruchika Verma",
-            "Shrishtee Kandoi",
-            "Robina Afzal",
-            "Shengjia Chen",
-            "Jannes Jegminat",
-            "Michael W. Karlovich",
-            "Melissa Umphlett",
-            "Timothy E. Richardson",
-            "Kevin Clare",
-            "Quazi Hossain",
-            "Jorge Samanamud",
-            "Phyllis L. Faust",
-            "Elan D. Louis",
-            "Ann C. McKee",
-            "Thor D. Stein",
-            "Jonathan D. Cherry",
-            "Jesse Mez",
-            "Anya C. McGoldrick",
-            "Dalilah D. Quintana Mora",
-            "Melissa J. Nirenberg",
-            "Ruth H. Walker",
-            "Yolfrankcis Mendez",
-            "Susan Morgello",
-            "Dennis W. Dickson",
-            "Melissa E. Murray",
-            "Carlos Cordon-Cardo",
-            "Nadejda M. Tsankova",
-            "Jamie M. Walker",
-            "Diana K. Dangoor",
-            "Stephanie McQuillan",
-            "Emma L. Thorn",
-            "Claudia De Sanctis",
-            "Shuying Li",
-            "Thomas J. Fuchs",
-            "Kurt Farrell",
-            "John F. Crary",
-            "Gabriele Campanella"
-        ],
-        "title": "Domain-Specific Foundation Model Improves AI-Based Analysis of Neuropathology",
-        "abstract": "arXiv:2512.05993v1 Announce Type: new  Abstract: Foundation models have transformed computational pathology by providing generalizable representations from large-scale histology datasets. However, existing models are predominantly trained on surgical pathology data, which is enriched for non-nervous tissue and overrepresents neoplastic, inflammatory, metabolic, and other non-neurological diseases. Neuropathology represents a markedly different domain of histopathology, characterized by unique cell types (neurons, glia, etc.), distinct cytoarchitecture, and disease-specific pathological features including neurofibrillary tangles, amyloid plaques, Lewy bodies, and pattern-specific neurodegeneration. This domain mismatch may limit the ability of general-purpose foundation models to capture the morphological patterns critical for interpreting neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and cerebellar ataxias. To address this gap, we developed NeuroFM, a foundation model trained specifically on whole-slide images of brain tissue spanning diverse neurodegenerative pathologies. NeuroFM demonstrates superior performance compared to general-purpose models across multiple neuropathology-specific downstream tasks, including mixed dementia disease classification, hippocampal region segmentation, and neurodegenerative ataxia identification encompassing cerebellar essential tremor and spinocerebellar ataxia subtypes. This work establishes that domain-specialized foundation models trained on brain tissue can better capture neuropathology-specific features than models trained on general surgical pathology datasets. By tailoring foundation models to the unique morphological landscape of neurodegenerative diseases, NeuroFM enables more accurate and reliable AI-based analysis for brain disease diagnosis and research, setting a precedent for domain-specific model development in specialized areas of digital pathology.",
-        "arxiv_id": "2512.05993",
-        "ARXIVID": "2512.05993",
-        "COMMENT": "Does not match any specific criteria but is related to domain-specific foundation models in pathology.",
-        "RELEVANCE": 3,
-        "NOVELTY": 5
+        "NOVELTY": 4
     }
 }
