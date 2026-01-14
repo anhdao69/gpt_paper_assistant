@@ -1,390 +1,154 @@
 {
-    "2601.06550": {
+    "2601.08273": {
         "authors": [
-            "Pan Liao",
-            "Feng Yang",
-            "Di Wu",
-            "Jinwen Yu",
-            "Yuhua Zhu",
-            "Wenhui Zhao"
-        ],
-        "title": "LLMTrack: Semantic Multi-Object Tracking with Multi-modal Large Language Models",
-        "abstract": "arXiv:2601.06550v1 Announce Type: new  Abstract: Traditional Multi-Object Tracking (MOT) systems have achieved remarkable precision in localization and association, effectively answering \\textit{where} and \\textit{who}. However, they often function as autistic observers, capable of tracing geometric paths but blind to the semantic \\textit{what} and \\textit{why} behind object behaviors. To bridge the gap between geometric perception and cognitive reasoning, we propose \\textbf{LLMTrack}, a novel end-to-end framework for Semantic Multi-Object Tracking (SMOT). We adopt a bionic design philosophy that decouples strong localization from deep understanding, utilizing Grounding DINO as the eyes and the LLaVA-OneVision multimodal large model as the brain. We introduce a Spatio-Temporal Fusion Module that aggregates instance-level interaction features and video-level contexts, enabling the Large Language Model (LLM) to comprehend complex trajectories. Furthermore, we design a progressive three-stage training strategy, Visual Alignment, Temporal Fine-tuning, and Semantic Injection via LoRA to efficiently adapt the massive model to the tracking domain. Extensive experiments on the BenSMOT benchmark demonstrate that LLMTrack achieves state-of-the-art performance, significantly outperforming existing methods in instance description, interaction recognition, and video summarization while maintaining robust tracking stability.",
-        "arxiv_id": "2601.06550",
-        "ARXIVID": "2601.06550",
-        "COMMENT": "Matches criterion 5 as it introduces LLMTrack, a framework combining image/video understanding with multimodal large language models for semantic multi-object tracking.",
-        "RELEVANCE": 9,
-        "NOVELTY": 8
-    },
-    "2601.06943": {
-        "authors": [
-            "Chengwen Liu",
-            "Xiaomin Yu",
-            "Zhuoyue Chang",
-            "Zhe Huang",
-            "Shuo Zhang",
-            "Heng Lian",
-            "Kunyi Wang",
-            "Rui Xu",
-            "Sen Hu",
-            "Jianheng Hou",
-            "Hao Peng",
-            "Chengwei Qin",
-            "Xiaobin Hu",
-            "Hong Peng",
-            "Ronghao Chen",
-            "Huacan Wang"
-        ],
-        "title": "Watching, Reasoning, and Searching: A Video Deep Research Benchmark on Open Web for Agentic Video Reasoning",
-        "abstract": "arXiv:2601.06943v1 Announce Type: new  Abstract: In real-world video question answering scenarios, videos often provide only localized visual cues, while verifiable answers are distributed across the open web; models therefore need to jointly perform cross-frame clue extraction, iterative retrieval, and multi-hop reasoning-based verification. To bridge this gap, we construct the first video deep research benchmark, VideoDR. VideoDR centers on video-conditioned open-domain video question answering, requiring cross-frame visual anchor extraction, interactive web retrieval, and multi-hop reasoning over joint video-web evidence; through rigorous human annotation and quality control, we obtain high-quality video deep research samples spanning six semantic domains. We evaluate multiple closed-source and open-source multimodal large language models under both the Workflow and Agentic paradigms, and the results show that Agentic is not consistently superior to Workflow: its gains depend on a model's ability to maintain the initial video anchors over long retrieval chains. Further analysis indicates that goal drift and long-horizon consistency are the core bottlenecks. In sum, VideoDR provides a systematic benchmark for studying video agents in open-web settings and reveals the key challenges for next-generation video deep research agents.",
-        "arxiv_id": "2601.06943",
-        "ARXIVID": "2601.06943",
-        "COMMENT": "Matches criterion 6 as it introduces a new benchmark (VideoDR) for video-based tasks, focusing on video question answering and reasoning.",
-        "RELEVANCE": 9,
-        "NOVELTY": 8
-    },
-    "2601.07761": {
-        "authors": [
-            "Yanxiang Huang",
-            "Guohua Gao",
-            "Zhaoyang Wei",
-            "Jianyuan Ni"
-        ],
-        "title": "Video Evidence to Reasoning Efficient Video Understanding via Explicit Evidence Grounding",
-        "abstract": "arXiv:2601.07761v1 Announce Type: new  Abstract: Large Vision-Language Models (LVLMs) face a fundamental dilemma in video reasoning: they are caught between the prohibitive computational costs of verbose reasoning and the hallucination risks of efficient, ungrounded approaches. To resolve this, we introduce the Chain of Evidence (CoE), a novel framework that architecturally decouples and co-optimizes perceptual grounding and reasoning efficiency. CoE incorporates two core innovations: (1) A lightweight Evidence Grounding Module (EGM) that acts as a query-guided filter, dynamically identifying and extracting a compact set of high-fidelity visual evidence; and (2) An Evidence-Anchoring Protocol optimized via Reinforcement Learning. Crucially, we design a composite reward mechanism that enforces process alignment, compelling the model to strictly reference identified temporal anchors during deduction, thereby mitigating hallucinations. To enable this, we construct CoE-Instruct, a large-scale dataset (164k samples) featuring a novel dual-annotation schema for separate perception and reasoning supervision. Extensive experiments on five benchmarks, including Video-MME, MVBench, and VSI-Bench, demonstrate that CoE-enhanced models establish a new state-of-the-art. They significantly outperform existing methods in accuracy, proving CoE to be a powerful and practical paradigm for reliable video understanding.",
-        "arxiv_id": "2601.07761",
-        "ARXIVID": "2601.07761",
-        "COMMENT": "Matches criteria 2 and 6. Proposes a novel framework for video reasoning using large vision-language models, addressing video understanding tasks.",
-        "RELEVANCE": 9,
-        "NOVELTY": 8
-    },
-    "2601.06474": {
-        "authors": [
-            "Chenxu Dang",
-            "Jie Wang",
-            "Guang Li",
-            "Zhiwen Hou",
-            "Zihan You",
-            "Hangjun Ye",
-            "Jie Ma",
-            "Long Chen",
-            "Yan Wang"
-        ],
-        "title": "SparseOccVLA: Bridging Occupancy and Vision-Language Models via Sparse Queries for Unified 4D Scene Understanding and Planning",
-        "abstract": "arXiv:2601.06474v1 Announce Type: new  Abstract: In autonomous driving, Vision Language Models (VLMs) excel at high-level reasoning , whereas semantic occupancy provides fine-grained details. Despite significant progress in individual fields, there is still no method that can effectively integrate both paradigms. Conventional VLMs struggle with token explosion and limited spatiotemporal reasoning, while semantic occupancy provides a unified, explicit spatial representation but is too dense to integrate efficiently with VLMs. To address these challenges and bridge the gap between VLMs and occupancy, we propose SparseOccVLA, a novel vision-language-action model that unifies scene understanding, occupancy forecasting, and trajectory planning powered by sparse occupancy queries. Starting with a lightweight Sparse Occupancy Encoder, SparseOccVLA generates compact yet highly informative sparse occupancy queries that serve as the single bridge between vision and language. These queries are aligned into the language space and reasoned by the LLM for unified scene understanding and future occupancy forecasting. Furthermore, we introduce an LLM-guided Anchor-Diffusion Planner featuring decoupled anchor scoring and denoising, as well as cross-model trajectory-condition fusion. SparseOccVLA achieves a 7% relative improvement in CIDEr over the state-of-the-art on OmniDrive-nuScenes, a 0.5 increase in mIoU score on Occ3D-nuScenes, and sets state-of-the-art open-loop planning metric on nuScenes benchmark, demonstrating its strong holistic capability.",
-        "arxiv_id": "2601.06474",
-        "ARXIVID": "2601.06474",
-        "COMMENT": "Matches criteria 2 and 3 closely. Explores integration of Vision-Language Models (VLMs) with occupancy forecasting and trajectory planning, which aligns with embodied AI and multimodal LLMs.",
-        "RELEVANCE": 9,
-        "NOVELTY": 8
-    },
-    "2601.07298": {
-        "authors": [
-            "Jianghao Yin",
-            "Qingbin Li",
-            "Kun Sun",
-            "Cheng Ding",
-            "Jie Wang",
-            "Qin Chen",
-            "Jie Zhou",
-            "Nan Wang",
-            "Changqing Li",
-            "Pei Wu",
-            "Jian Xu",
-            "Zheming Yang",
-            "Liang He"
-        ],
-        "title": "Mimic Human Cognition, Master Multi-Image Reasoning: A Meta-Action Framework for Enhanced Visual Understanding",
-        "abstract": "arXiv:2601.07298v1 Announce Type: new  Abstract: While Multimodal Large Language Models (MLLMs) excel at single-image understanding, they exhibit significantly degraded performance in multi-image reasoning scenarios. Multi-image reasoning presents fundamental challenges including complex inter-relationships between images and scattered critical information across image sets. Inspired by human cognitive processes, we propose the Cognition-Inspired Meta-Action Framework (CINEMA), a novel approach that decomposes multi-image reasoning into five structured meta-actions: Global, Focus, Hint, Think, and Answer which explicitly modeling the sequential cognitive steps humans naturally employ. For cold-start training, we introduce a Retrieval-Based Tree Sampling strategy that generates high-quality meta-action trajectories to bootstrap the model with reasoning patterns. During reinforcement learning, we adopt a two-stage paradigm: an exploration phase with Diversity-Preserving Strategy to avoid entropy collapse, followed by an annealed exploitation phase with DAPO to gradually strengthen exploitation. To train our model, we construct a dataset of 57k cold-start and 58k reinforcement learning instances spanning multi-image, multi-frame, and single-image tasks. We conduct extensive evaluations on multi-image reasoning benchmarks, video understanding benchmarks, and single-image benchmarks, achieving competitive state-of-the-art performance on several key benchmarks. Our model surpasses GPT-4o on the MUIR and MVMath benchmarks and notably outperforms specialized video reasoning models on video understanding benchmarks, demonstrating the effectiveness and generalizability of our human cognition-inspired reasoning framework.",
-        "arxiv_id": "2601.07298",
-        "ARXIVID": "2601.07298",
-        "COMMENT": "Matches criterion 2 (Visual and Multimodal Large Language Models) and criterion 6 (Video Understanding) as it introduces a novel framework for multi-image and video reasoning.",
-        "RELEVANCE": 8,
-        "NOVELTY": 8
-    },
-    "2601.06993": {
-        "authors": [
-            "Jie Zhu",
-            "Yiyang Su",
-            "Xiaoming Liu"
-        ],
-        "title": "Can Textual Reasoning Improve the Performance of MLLMs on Fine-grained Visual Classification?",
-        "abstract": "arXiv:2601.06993v1 Announce Type: new  Abstract: Multi-modal large language models (MLLMs) exhibit strong general-purpose capabilities, yet still struggle on Fine-Grained Visual Classification (FGVC), a core perception task that requires subtle visual discrimination and is crucial for many real-world applications. A widely adopted strategy for boosting performance on challenging tasks such as math and coding is Chain-of-Thought (CoT) reasoning. However, several prior works have reported that CoT can actually harm performance on visual perception tasks. These studies, though, examine the issue from relatively narrow angles and leave open why CoT degrades perception-heavy performance. We systematically re-examine the role of CoT in FGVC through the lenses of zero-shot evaluation and multiple training paradigms. Across these settings, we uncover a central paradox: the degradation induced by CoT is largely driven by the reasoning length, in which longer textual reasoning consistently lowers classification accuracy. We term this phenomenon the ``Cost of Thinking''. Building on this finding, we make two key contributions: (1) \\alg, a simple and general plug-and-play normalization method for multi-reward optimization that balances heterogeneous reward signals, and (2) ReFine-RFT, a framework that combines ensemble rewards with \\alg to constrain reasoning length while providing dense accuracy-oriented feedback. Extensive experiments demonstrate the effectiveness of our findings and the proposed ReFine-RFT, achieving state-of-the-art performance across FGVC benchmarks. Code and models are available at \\href{https://github.com/jiezhu23/ReFine-RFT}{Project Link}.",
-        "arxiv_id": "2601.06993",
-        "ARXIVID": "2601.06993",
-        "COMMENT": "Matches criterion 2 as it explores reasoning strategies (Chain-of-Thought) in Multi-modal Large Language Models (MLLMs) for fine-grained visual classification.",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.06559": {
-        "authors": [
-            "Fangxu Yu",
-            "Ziyao Lu",
-            "Liqiang Niu",
-            "Fandong Meng",
-            "Jie Zhou"
-        ],
-        "title": "ArrowGEV: Grounding Events in Video via Learning the Arrow of Time",
-        "abstract": "arXiv:2601.06559v1 Announce Type: new  Abstract: Grounding events in videos serves as a fundamental capability in video analysis. While Vision-Language Models (VLMs) are increasingly employed for this task, existing approaches predominantly train models to associate events with timestamps in the forward video only. This paradigm hinders VLMs from capturing the inherent temporal structure and directionality of events, thereby limiting robustness and generalization. To address this limitation, inspired by the arrow of time in physics, which characterizes the intrinsic directionality of temporal processes, we propose ArrowGEV, a reinforcement learning framework that explicitly models temporal directionality in events to improve both event grounding and temporal directionality understanding in VLMs. Specifically, we categorize events into time-sensitive (e.g., putting down a bag) and time-insensitive (e.g., holding a towel in the left hand). The former denote events whose reversal substantially alters their meaning, while the latter remain semantically unchanged under reversal. For time-sensitive events, ArrowGEV introduces a reward that encourages VLMs to discriminate between forward and backward videos, whereas for time-insensitive events, it enforces consistent grounding across both directions. Extensive experiments demonstrate that ArrowGEV not only improves grounding precision and temporal directionality recognition, but also enhances general video understanding and reasoning ability.",
-        "arxiv_id": "2601.06559",
-        "ARXIVID": "2601.06559",
-        "COMMENT": "Matches criterion 6 as it proposes a novel reinforcement learning framework (ArrowGEV) for grounding events in videos, improving temporal directionality understanding.",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.07812": {
-        "authors": [
-            "Anurag Das",
-            "Adrian Bulat",
-            "Alberto Baldrati",
-            "Ioannis Maniadis Metaxas",
-            "Bernt Schiele",
-            "Georgios Tzimiropoulos",
-            "Brais Martinez"
-        ],
-        "title": "More Images, More Problems? A Controlled Analysis of VLM Failure Modes",
-        "abstract": "arXiv:2601.07812v1 Announce Type: new  Abstract: Large Vision Language Models (LVLMs) have demonstrated remarkable capabilities, yet their proficiency in understanding and reasoning over multiple images remains largely unexplored. While existing benchmarks have initiated the evaluation of multi-image models, a comprehensive analysis of their core weaknesses and their causes is still lacking. In this work, we introduce MIMIC (Multi-Image Model Insights and Challenges), a new benchmark designed to rigorously evaluate the multi-image capabilities of LVLMs. Using MIMIC, we conduct a series of diagnostic experiments that reveal pervasive issues: LVLMs often fail to aggregate information across images and struggle to track or attend to multiple concepts simultaneously. To address these failures, we propose two novel complementary remedies. On the data side, we present a procedural data-generation strategy that composes single-image annotations into rich, targeted multi-image training examples. On the optimization side, we analyze layer-wise attention patterns and derive an attention-masking scheme tailored for multi-image inputs. Experiments substantially improved cross-image aggregation, while also enhancing performance on existing multi-image benchmarks, outperforming prior state of the art across tasks. Data and code will be made available at https://github.com/anurag-198/MIMIC.",
-        "arxiv_id": "2601.07812",
-        "ARXIVID": "2601.07812",
-        "COMMENT": "Matches criterion 2 as it introduces a benchmark and methods for evaluating and improving multi-image capabilities in Vision-Language Models (VLLMs).",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.06391": {
-        "authors": [
-            "Saksham Singh Kushwaha",
-            "Sayan Nag",
-            "Yapeng Tian",
-            "Kuldeep Kulkarni"
-        ],
-        "title": "Object-WIPER : Training-Free Object and Associated Effect Removal in Videos",
-        "abstract": "arXiv:2601.06391v1 Announce Type: new  Abstract: In this paper, we introduce Object-WIPER, a training-free framework for removing dynamic objects and their associated visual effects from videos, and inpainting them with semantically consistent and temporally coherent content. Our approach leverages a pre-trained text-to-video diffusion transformer (DiT). Given an input video, a user-provided object mask, and query tokens describing the target object and its effects, we localize relevant visual tokens via visual-text cross-attention and visual self-attention. This produces an intermediate effect mask that we fuse with the user mask to obtain a final foreground token mask to replace. We first invert the video through the DiT to obtain structured noise, then reinitialize the masked tokens with Gaussian noise while preserving background tokens. During denoising, we copy values for the background tokens saved during inversion to maintain scene fidelity. To address the lack of suitable evaluation, we introduce a new object removal metric that rewards temporal consistency among foreground tokens across consecutive frames, coherence between foreground and background tokens within each frame, and dissimilarity between the input and output foreground tokens. Experiments on DAVIS and a newly curated real-world associated effect benchmark (WIPER-Bench) show that Object-WIPER surpasses both training-based and training-free baselines in terms of the metric, achieving clean removal and temporally stable reconstruction without any retraining. Our new benchmark, source code, and pre-trained models will be publicly available.",
-        "arxiv_id": "2601.06391",
-        "ARXIVID": "2601.06391",
-        "COMMENT": "Matches criterion 5. Proposes a training-free framework for object and effect removal in videos using text-to-video diffusion models, integrating video understanding and generation tasks.",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.06224": {
-        "authors": [
-            "Miao Pan",
-            "Wangjie Gan",
-            "Jintao Chen",
-            "Wenqi Zhang",
-            "Bing Sun",
-            "Jianwei Yin",
-            "Xuhong Zhang"
-        ],
-        "title": "Ground What You See: Hallucination-Resistant MLLMs via Caption Feedback, Diversity-Aware Sampling, and Conflict Regularization",
-        "abstract": "arXiv:2601.06224v1 Announce Type: new  Abstract: While Multimodal Large Language Models (MLLMs) have achieved remarkable success across diverse tasks, their practical deployment is severely hindered by hallucination issues, which become particularly acute during Reinforcement Learning (RL) optimization. This paper systematically analyzes the root causes of hallucinations in MLLMs under RL training, identifying three critical factors: (1) an over-reliance on chained visual reasoning, where inaccurate initial descriptions or redundant information anchor subsequent inferences to incorrect premises; (2) insufficient exploration diversity during policy optimization, leading the model to generate overly confident but erroneous outputs; and (3) destructive conflicts between training samples, where Neural Tangent Kernel (NTK) similarity causes false associations and unstable parameter updates. To address these challenges, we propose a comprehensive framework comprising three core modules. First, we enhance visual localization by introducing dedicated planning and captioning stages before the reasoning phase, employing a quality-based caption reward to ensure accurate initial anchoring. Second, to improve exploration, we categorize samples based on the mean and variance of their reward distributions, prioritizing samples with high variance to focus the model on diverse and informative data. Finally, to mitigate sample interference, we regulate NTK similarity by grouping sample pairs and applying an InfoNCE loss to push overly similar pairs apart and pull dissimilar ones closer, thereby guiding gradient interactions toward a balanced range. Experimental results demonstrate that our proposed method significantly reduces hallucination rates and effectively enhances the inference accuracy of MLLMs.",
-        "arxiv_id": "2601.06224",
-        "ARXIVID": "2601.06224",
-        "COMMENT": "Matches criterion 2. Addresses hallucination issues in multimodal large language models (MLLMs) with novel techniques, which aligns with vision-language integration.",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.07333": {
-        "authors": [
-            "Tessa Pulli",
-            "Jean-Baptiste Weibel",
-            "Peter H\\\"onig",
-            "Matthias Hirschmanner",
-            "Markus Vincze",
-            "Andreas Holzinger"
-        ],
-        "title": "OSCAR: Open-Set CAD Retrieval from a Language Prompt and a Single Image",
-        "abstract": "arXiv:2601.07333v1 Announce Type: new  Abstract: 6D object pose estimation plays a crucial role in scene understanding for applications such as robotics and augmented reality. To support the needs of ever-changing object sets in such context, modern zero-shot object pose estimators were developed to not require object-specific training but only rely on CAD models. Such models are hard to obtain once deployed, and a continuously changing and growing set of objects makes it harder to reliably identify the instance model of interest. To address this challenge, we introduce an Open-Set CAD Retrieval from a Language Prompt and a Single Image (OSCAR), a novel training-free method that retrieves a matching object model from an unlabeled 3D object database. During onboarding, OSCAR generates multi-view renderings of database models and annotates them with descriptive captions using an image captioning model. At inference, GroundedSAM detects the queried object in the input image, and multi-modal embeddings are computed for both the Region-of-Interest and the database captions. OSCAR employs a two-stage retrieval: text-based filtering using CLIP identifies candidate models, followed by image-based refinement using DINOv2 to select the most visually similar object. In our experiments we demonstrate that OSCAR outperforms all state-of-the-art methods on the cross-domain 3D model retrieval benchmark MI3DOR. Furthermore, we demonstrate OSCAR's direct applicability in automating object model sourcing for 6D object pose estimation. We propose using the most similar object model for pose estimation if the exact instance is not available and show that OSCAR achieves an average precision of 90.48\\% during object retrieval on the YCB-V object dataset. Moreover, we demonstrate that the most similar object model can be utilized for pose estimation using Megapose achieving better results than a reconstruction-based approach.",
-        "arxiv_id": "2601.07333",
-        "ARXIVID": "2601.07333",
-        "COMMENT": "Matches criterion 3 (Embodied/Robotic AI: New Benchmarks or Methods) as it introduces a novel method for CAD retrieval, which is relevant for robotics and object pose estimation.",
-        "RELEVANCE": 8,
-        "NOVELTY": 7
-    },
-    "2601.07660": {
-        "authors": [
-            "Yuze He",
-            "Yanning Zhou",
-            "Wang Zhao",
-            "Jingwen Ye",
-            "Zhongkai Wu",
-            "Ran Yi",
-            "Yong-Jin Liu"
-        ],
-        "title": "StdGEN++: A Comprehensive System for Semantic-Decomposed 3D Character Generation",
-        "abstract": "arXiv:2601.07660v1 Announce Type: new  Abstract: We present StdGEN++, a novel and comprehensive system for generating high-fidelity, semantically decomposed 3D characters from diverse inputs. Existing 3D generative methods often produce monolithic meshes that lack the structural flexibility required by industrial pipelines in gaming and animation. Addressing this gap, StdGEN++ is built upon a Dual-branch Semantic-aware Large Reconstruction Model (Dual-Branch S-LRM), which jointly reconstructs geometry, color, and per-component semantics in a feed-forward manner. To achieve production-level fidelity, we introduce a novel semantic surface extraction formalism compatible with hybrid implicit fields. This mechanism is accelerated by a coarse-to-fine proposal scheme, which significantly reduces memory footprint and enables high-resolution mesh generation. Furthermore, we propose a video-diffusion-based texture decomposition module that disentangles appearance into editable layers (e.g., separated iris and skin), resolving semantic confusion in facial regions. Experiments demonstrate that StdGEN++ achieves state-of-the-art performance, significantly outperforming existing methods in geometric accuracy and semantic disentanglement. Crucially, the resulting structural independence unlocks advanced downstream capabilities, including non-destructive editing, physics-compliant animation, and gaze tracking, making it a robust solution for automated character asset production.",
-        "arxiv_id": "2601.07660",
-        "ARXIVID": "2601.07660",
-        "COMMENT": "Matches criterion 3 (Embodied/Robotic AI: New Benchmarks or Methods) as it introduces a system for 3D character generation with structural independence, relevant for animation and robotics.",
-        "RELEVANCE": 7,
-        "NOVELTY": 7
-    },
-    "2601.07221": {
-        "authors": [
-            "Jongwon Ryu",
-            "Joonhyung Park",
-            "Jaeho Han",
-            "Yeong-Seok Kim",
-            "Hye-rin Kim",
-            "Sunjae Yoon",
-            "Junyeong Kim"
-        ],
-        "title": "Language-Grounded Multi-Domain Image Translation via Semantic Difference Guidance",
-        "abstract": "arXiv:2601.07221v1 Announce Type: new  Abstract: Multi-domain image-to-image translation re quires grounding semantic differences ex pressed in natural language prompts into corresponding visual transformations, while preserving unrelated structural and seman tic content. Existing methods struggle to maintain structural integrity and provide fine grained, attribute-specific control, especially when multiple domains are involved. We propose LACE (Language-grounded Attribute Controllable Translation), built on two compo nents: (1) a GLIP-Adapter that fuses global semantics with local structural features to pre serve consistency, and (2) a Multi-Domain Control Guidance mechanism that explicitly grounds the semantic delta between source and target prompts into per-attribute translation vec tors, aligning linguistic semantics with domain level visual changes. Together, these modules enable compositional multi-domain control with independent strength modulation for each attribute. Experiments on CelebA(Dialog) and BDD100K demonstrate that LACE achieves high visual fidelity, structural preservation, and interpretable domain-specific control, surpass ing prior baselines. This positions LACE as a cross-modal content generation framework bridging language semantics and controllable visual translation.",
-        "arxiv_id": "2601.07221",
-        "ARXIVID": "2601.07221",
-        "COMMENT": "Matches criterion 5 (Integration of Image/Video and Large Language Models) as it focuses on language-grounded multi-domain image translation.",
-        "RELEVANCE": 7,
-        "NOVELTY": 7
-    },
-    "2601.07218": {
-        "authors": [
-            "Jeongjun Choi",
-            "Yeonsoo Park",
-            "H. Jin Kim"
-        ],
-        "title": "SceneNAT: Masked Generative Modeling for Language-Guided Indoor Scene Synthesis",
-        "abstract": "arXiv:2601.07218v1 Announce Type: new  Abstract: We present SceneNAT, a single-stage masked non-autoregressive Transformer that synthesizes complete 3D indoor scenes from natural language instructions through only a few parallel decoding passes, offering improved performance and efficiency compared to prior state-of-the-art approaches. SceneNAT is trained via masked modeling over fully discretized representations of both semantic and spatial attributes. By applying a masking strategy at both the attribute level and the instance level, the model can better capture intra-object and inter-object structure. To boost relational reasoning, SceneNAT employs a dedicated triplet predictor for modeling the scene's layout and object relationships by mapping a set of learnable relation queries to a sparse set of symbolic triplets (subject, predicate, object). Extensive experiments on the 3D-FRONT dataset demonstrate that SceneNAT achieves superior performance compared to state-of-the-art autoregressive and diffusion baselines in both semantic compliance and spatial arrangement accuracy, while operating with substantially lower computational cost.",
-        "arxiv_id": "2601.07218",
-        "ARXIVID": "2601.07218",
-        "COMMENT": "Matches criterion 1 (Spatial Intelligence and Embodied Agents) as it focuses on spatial reasoning for 3D indoor scene synthesis.",
-        "RELEVANCE": 7,
-        "NOVELTY": 7
-    },
-    "2601.07737": {
-        "authors": [
-            "Chen Ling",
-            "Nai Ding"
-        ],
-        "title": "Evaluating the encoding competence of visual language models using uncommon actions",
-        "abstract": "arXiv:2601.07737v1 Announce Type: new  Abstract: We propose UAIT (Uncommon-sense Action Image-Text) dataset, a new evaluation benchmark designed to test the semantic understanding ability of visual language models (VLMs) in uncommon-sense action scenes. Unlike previous datasets that focus on common visual scenes with statistical frequency advantages, UAIT challenges models with grammatically reasonable but semantically counter-common sense image-text pairs. Such tasks require models to go beyond superficial pattern recognition and demonstrate a deep understanding of agent-patient relationships and physical feasibility. To build UAIT, we designed a semi-automated process to synthesize high-quality uncommon-sense image-text samples using large language models, few-shot prompt engineering, and text-to-image generation. Each sample is accompanied by a carefully designed multiple-choice question to test the model's competence in fine-grained reasoning. We evaluate multiple state-of-the-art visual language models and compare them with models based on contrastive learning. Experiments show that all models perform significantly worse than humans in semantic judgment, especially in distinguishing grammatical correctness from semantic rationality. Further experiments show that even the lightweight model can improve its accuracy after fine-tuning, demonstrating the great potential of directional adaptation. This study not only reveals the key weaknesses of VLMs, but also provides diagnostic tools and research directions for the development of robust models with real visual semantic reasoning capabilities.",
-        "arxiv_id": "2601.07737",
-        "ARXIVID": "2601.07737",
-        "COMMENT": "Matches criterion 7. Proposes a new benchmark (UAIT) to evaluate visual language models on uncommon-sense action scenes, providing insights into their semantic reasoning capabilities.",
-        "RELEVANCE": 7,
-        "NOVELTY": 6
-    },
-    "2601.06521": {
-        "authors": [
-            "Liang Chen",
-            "Weichu Xie",
-            "Yiyan Liang",
-            "Hongfeng He",
-            "Hans Zhao",
-            "Zhibo Yang",
-            "Zhiqi Huang",
-            "Haoning Wu",
-            "Haoyu Lu",
-            "Y. charles",
-            "Yiping Bao",
-            "Yuantao Fan",
-            "Guopeng Li",
-            "Haiyang Shen",
-            "Xuanzhong Chen",
-            "Wendong Xu",
-            "Shuzheng Si",
-            "Zefan Cai",
-            "Wenhao Chai",
-            "Ziqi Huang",
-            "Fangfu Liu",
+            "Qitan Lv",
             "Tianyu Liu",
-            "Baobao Chang",
-            "Xiaobo Hu",
-            "Kaiyuan Chen",
-            "Yixin Ren",
-            "Yang Liu",
-            "Yuan Gong",
-            "Kuan Li"
+            "Wen Wu",
+            "Xuenan Xu",
+            "Bowen Zhou",
+            "Feng Wu",
+            "Chao Zhang"
         ],
-        "title": "BabyVision: Visual Reasoning Beyond Language",
-        "abstract": "arXiv:2601.06521v1 Announce Type: new  Abstract: While humans develop core visual skills long before acquiring language, contemporary Multimodal LLMs (MLLMs) still rely heavily on linguistic priors to compensate for their fragile visual understanding. We uncovered a crucial fact: state-of-the-art MLLMs consistently fail on basic visual tasks that humans, even 3-year-olds, can solve effortlessly. To systematically investigate this gap, we introduce BabyVision, a benchmark designed to assess core visual abilities independent of linguistic knowledge for MLLMs. BabyVision spans a wide range of tasks, with 388 items divided into 22 subclasses across four key categories. Empirical results and human evaluation reveal that leading MLLMs perform significantly below human baselines. Gemini3-Pro-Preview scores 49.7, lagging behind 6-year-old humans and falling well behind the average adult score of 94.1. These results show despite excelling in knowledge-heavy evaluations, current MLLMs still lack fundamental visual primitives. Progress in BabyVision represents a step toward human-level visual perception and reasoning capabilities. We also explore solving visual reasoning with generation models by proposing BabyVision-Gen and automatic evaluation toolkit. Our code and benchmark data are released at https://github.com/UniPat-AI/BabyVision for reproduction.",
-        "arxiv_id": "2601.06521",
-        "ARXIVID": "2601.06521",
-        "COMMENT": "Matches criterion 5 (Integration of Image/Video and Large Language Models) as it introduces a benchmark for visual reasoning independent of linguistic priors.",
-        "RELEVANCE": 6,
+        "title": "HIPPO: Accelerating Video Large Language Models Inference via Holistic-aware Parallel Speculative Decoding",
+        "abstract": "arXiv:2601.08273v1 Announce Type: new  Abstract: Speculative decoding (SD) has emerged as a promising approach to accelerate LLM inference without sacrificing output quality. Existing SD methods tailored for video-LLMs primarily focus on pruning redundant visual tokens to mitigate the computational burden of massive visual inputs. However, existing methods do not achieve inference acceleration comparable to text-only LLMs. We observe from extensive experiments that this phenomenon mainly stems from two limitations: (i) their pruning strategies inadequately preserve visual semantic tokens, degrading draft quality and acceptance rates; (ii) even with aggressive pruning (e.g., 90% visual tokens removed), the draft model's remaining inference cost limits overall speedup. To address these limitations, we propose HIPPO, a general holistic-aware parallel speculative decoding framework. Specifically, HIPPO proposes (i) a semantic-aware token preservation method, which fuses global attention scores with local visual semantics to retain semantic information at high pruning ratios; (ii) a video parallel SD algorithm that decouples and overlaps draft generation and target verification phases. Experiments on four video-LLMs across six benchmarks demonstrate HIPPO's effectiveness, yielding up to 3.51x speedup compared to vanilla auto-regressive decoding.",
+        "arxiv_id": "2601.08273",
+        "ARXIVID": "2601.08273",
+        "COMMENT": "This paper matches criterion 2 as it focuses on accelerating inference for Video Large Language Models (Video LLMs) with novel speculative decoding techniques.",
+        "RELEVANCE": 10,
         "NOVELTY": 7
     },
-    "2601.06202": {
+    "2601.08079": {
         "authors": [
-            "Shiwen Zhang",
-            "Haibin Huang",
-            "Chi Zhang",
-            "Xuelong Li"
+            "Hongjin Qian",
+            "Zhao Cao",
+            "Zheng Liu"
         ],
-        "title": "QwenStyle: Content-Preserving Style Transfer with Qwen-Image-Edit",
-        "abstract": "arXiv:2601.06202v1 Announce Type: new  Abstract: Content-Preserving Style transfer, given content and style references, remains challenging for Diffusion Transformers (DiTs) due to its internal entangled content and style features. In this technical report, we propose the first content-preserving style transfer model trained on Qwen-Image-Edit, which activates Qwen-Image-Edit's strong content preservation and style customization capability. We collected and filtered high quality data of limited specific styles and synthesized triplets with thousands categories of style images in-the-wild. We introduce the Curriculum Continual Learning framework to train QwenStyle with such mixture of clean and noisy triplets, which enables QwenStyle to generalize to unseen styles without degradation of the precise content preservation capability. Our QwenStyle V1 achieves state-of-the-art performance in three core metrics: style similarity, content consistency, and aesthetic quality.",
-        "arxiv_id": "2601.06202",
-        "ARXIVID": "2601.06202",
-        "COMMENT": "Matches criterion 5 (Integration of Image/Video and Large Language Models) as it focuses on content-preserving style transfer using a diffusion transformer.",
-        "RELEVANCE": 6,
+        "title": "MemoBrain: Executive Memory as an Agentic Brain for Reasoning",
+        "abstract": "arXiv:2601.08079v1 Announce Type: new  Abstract: Complex reasoning in tool-augmented agent frameworks is inherently long-horizon, causing reasoning traces and transient tool artifacts to accumulate and strain the bounded working context of large language models. Without explicit memory mechanisms, such accumulation disrupts logical continuity and undermines task alignment. This positions memory not as an auxiliary efficiency concern, but as a core component for sustaining coherent, goal-directed reasoning over long horizons.   We propose MemoBrain, an executive memory model for tool-augmented agents that constructs a dependency-aware memory over reasoning steps, capturing salient intermediate states and their logical relations. Operating as a co-pilot alongside the reasoning agent, MemoBrain organizes reasoning progress without blocking execution and actively manages the working context. Specifically, it prunes invalid steps, folds completed sub-trajectories, and preserves a compact, high-salience reasoning backbone under a fixed context budget. Together, these mechanisms enable explicit cognitive control over reasoning trajectories rather than passive context accumulation.   We evaluate MemoBrain on challenging long-horizon benchmarks, including GAIA, WebWalker, and BrowseComp-Plus, demonstrating consistent improvements over strong baselines.",
+        "arxiv_id": "2601.08079",
+        "ARXIVID": "2601.08079",
+        "COMMENT": "This paper matches criterion 3 as it introduces a novel memory mechanism for tool-augmented agents, which is relevant to embodied AI and long-horizon reasoning.",
+        "RELEVANCE": 8,
+        "NOVELTY": 7
+    },
+    "2601.07855": {
+        "authors": [
+            "Subeen Lee",
+            "Siyeong Lee",
+            "Namil Kim",
+            "Jaesik Choi"
+        ],
+        "title": "An Empirical Study on Knowledge Transfer under Domain and Label Shifts in 3D LiDAR Point Clouds",
+        "abstract": "arXiv:2601.07855v1 Announce Type: new  Abstract: For 3D perception systems to be practical in real-world applications -- from autonomous driving to embodied AI -- models must adapt to continuously evolving object definitions and sensor domains. Yet, research on continual and transfer learning in 3D point cloud perception remains underexplored compared to 2D vision -- particularly under simultaneous domain and label shifts. To address this gap, we propose the RObust Autonomous driving under Dataset shifts (ROAD) benchmark, a comprehensive evaluation suite for LiDAR-based object classification that explicitly accounts for domain shifts as well as three key forms of label evolution: class split, class expansion, and class insertion. Using large-scale datasets (Waymo, NuScenes, Argoverse2), we evaluate zero-shot transfer, linear probe, and CL, and analyze the impact of backbone architectures, training objectives, and CL methods. Our findings reveal limitations of existing approaches under realistic shifts and establish strong baselines for future research in robust 3D perception.",
+        "arxiv_id": "2601.07855",
+        "ARXIVID": "2601.07855",
+        "COMMENT": "Matches criterion 3 (Embodied/Robotic AI: New Benchmarks or Methods) as it introduces the ROAD benchmark for robust 3D perception under domain and label shifts.",
+        "RELEVANCE": 7,
+        "NOVELTY": 7
+    },
+    "2601.08408": {
+        "authors": [
+            "Yizhan Feng",
+            "Hichem Snoussi",
+            "Jing Teng",
+            "Jian Liu",
+            "Yuyang Wang",
+            "Abel Cherouat",
+            "Tian Wang"
+        ],
+        "title": "Edge-Optimized Multimodal Learning for UAV Video Understanding via BLIP-2",
+        "abstract": "arXiv:2601.08408v1 Announce Type: new  Abstract: The demand for real-time visual understanding and interaction in complex scenarios is increasingly critical for unmanned aerial vehicles. However, a significant challenge arises from the contradiction between the high computational cost of large Vision language models and the limited computing resources available on UAV edge devices. To address this challenge, this paper proposes a lightweight multimodal task platform based on BLIP-2, integrated with YOLO-World and YOLOv8-Seg models. This integration extends the multi-task capabilities of BLIP-2 for UAV applications with minimal adaptation and without requiring task-specific fine-tuning on drone data. Firstly, the deep integration of BLIP-2 with YOLO models enables it to leverage the precise perceptual results of YOLO for fundamental tasks like object detection and instance segmentation, thereby facilitating deeper visual-attention understanding and reasoning. Secondly, a content-aware key frame sampling mechanism based on K-Means clustering is designed, which incorporates intelligent frame selection and temporal feature concatenation. This equips the lightweight BLIP-2 architecture with the capability to handle video-level interactive tasks effectively. Thirdly, a unified prompt optimization scheme for multi-task adaptation is implemented. This scheme strategically injects structured event logs from the YOLO models as contextual information into BLIP-2's input. Combined with output constraints designed to filter out technical details, this approach effectively guides the model to generate accurate and contextually relevant outputs for various tasks.",
+        "arxiv_id": "2601.08408",
+        "ARXIVID": "2601.08408",
+        "COMMENT": "Matches criterion 2 (Visual and Multimodal Large Language Models) as it explores a lightweight multimodal task platform based on BLIP-2 for UAV video understanding.",
+        "RELEVANCE": 8,
         "NOVELTY": 6
     },
-    "2601.06394": {
+    "2601.08462": {
         "authors": [
-            "Ahmed Abdelkawy",
-            "Ahmed Elsayed",
-            "Asem Ali",
-            "Aly Farag",
-            "Thomas Tretter",
-            "Michael McIntyre"
+            "Sixiong Xie",
+            "Zhuofan Shi",
+            "Haiyang Shen",
+            "Gang Huang",
+            "Yun Ma",
+            "Xiang Jing"
         ],
-        "title": "Context Matters: Peer-Aware Student Behavioral Engagement Measurement via VLM Action Parsing and LLM Sequence Classification",
-        "abstract": "arXiv:2601.06394v1 Announce Type: new  Abstract: Understanding student behavior in the classroom is essential to improve both pedagogical quality and student engagement. Existing methods for predicting student engagement typically require substantial annotated data to model the diversity of student behaviors, yet privacy concerns often restrict researchers to their own proprietary datasets. Moreover, the classroom context, represented in peers' actions, is ignored. To address the aforementioned limitation, we propose a novel three-stage framework for video-based student engagement measurement. First, we explore the few-shot adaptation of the vision-language model for student action recognition, which is fine-tuned to distinguish among action categories with a few training samples. Second, to handle continuous and unpredictable student actions, we utilize the sliding temporal window technique to divide each student's 2-minute-long video into non-overlapping segments. Each segment is assigned an action category via the fine-tuned VLM model, generating a sequence of action predictions. Finally, we leverage the large language model to classify this entire sequence of actions, together with the classroom context, as belonging to an engaged or disengaged student. The experimental results demonstrate the effectiveness of the proposed approach in identifying student engagement.",
-        "arxiv_id": "2601.06394",
-        "ARXIVID": "2601.06394",
-        "COMMENT": "Matches criterion 6 (Video Understanding) as it focuses on video-based student engagement measurement using vision-language models.",
-        "RELEVANCE": 6,
+        "title": "M3-BENCH: Process-Aware Evaluation of LLM Agents Social Behaviors in Mixed-Motive Games",
+        "abstract": "arXiv:2601.08462v1 Announce Type: new  Abstract: As the capabilities of large language model (LLM) agents continue to advance, their advanced social behaviors, such as cooperation, deception, and collusion, call for systematic evaluation. However, existing benchmarks often emphasize a single capability dimension or rely solely on behavioral outcomes, overlooking rich process information from agents' decision reasoning and communicative interactions. To address this gap, we propose M3-Bench, a multi-stage benchmark for mixed-motive games, together with a process-aware evaluation framework that conducts synergistic analysis across three modules: BTA (Behavioral Trajectory Analysis), RPA (Reasoning Process Analysis), and CCA (Communication Content Analysis). Furthermore, we integrate the Big Five personality model and Social Exchange Theory to aggregate multi-dimensional evidence into interpretable social behavior portraits, thereby characterizing agents' personality traits and capability profiles beyond simple task scores or outcome-based metrics. Experimental results show that M3-Bench can reliably distinguish diverse social behavior competencies across models, and it reveals that some models achieve seemingly reasonable behavioral outcomes while exhibiting pronounced inconsistencies in their reasoning and communication.",
+        "arxiv_id": "2601.08462",
+        "ARXIVID": "2601.08462",
+        "COMMENT": "This paper does not match any specific criteria but explores benchmarks for social behaviors in LLM agents, which may be tangentially interesting for embodied AI.",
+        "RELEVANCE": 3,
         "NOVELTY": 6
     },
-    "2601.06673": {
+    "2601.08336": {
         "authors": [
-            "Sanjay Pradeep",
-            "Chen Wang",
-            "Matthew M. Dahm",
-            "Jeff D. Eldredge",
-            "Candace S. J. Tsai"
+            "Junzhuo Liu",
+            "Xuemei Du",
+            "Daniel Reisenbuchler",
+            "Ye Chen",
+            "Markus Eckstein",
+            "Christian Matek",
+            "Friedrich Feuerhake",
+            "Dorit Merhof"
         ],
-        "title": "Quantification and Classification of Carbon Nanotubes in Electron Micrographs using Vision Foundation Models",
-        "abstract": "arXiv:2601.06673v1 Announce Type: new  Abstract: Accurate characterization of carbon nanotube morphologies in electron microscopy images is vital for exposure assessment and toxicological studies, yet current workflows rely on slow, subjective manual segmentation. This work presents a unified framework leveraging vision foundation models to automate the quantification and classification of CNTs in electron microscopy images. First, we introduce an interactive quantification tool built on the Segment Anything Model (SAM) that segments particles with near-perfect accuracy using minimal user input. Second, we propose a novel classification pipeline that utilizes these segmentation masks to spatially constrain a DINOv2 vision transformer, extracting features exclusively from particle regions while suppressing background noise. Evaluated on a dataset of 1,800 TEM images, this architecture achieves 95.5% accuracy in distinguishing between four different CNT morphologies, significantly outperforming the current baseline despite using a fraction of the training data. Crucially, this instance-level processing allows the framework to resolve mixed samples, correctly classifying distinct particle types co-existing within a single field of view. These results demonstrate that integrating zero-shot segmentation with self-supervised feature learning enables high-throughput, reproducible nanomaterial analysis, transforming a labor-intensive bottleneck into a scalable, data-driven process.",
-        "arxiv_id": "2601.06673",
-        "ARXIVID": "2601.06673",
-        "COMMENT": "Matches criterion 4. Focuses on vision foundation models applied to electron microscopy images, showcasing their utility in a specific domain.",
-        "RELEVANCE": 5,
+        "title": "Tissue Classification and Whole-Slide Images Analysis via Modeling of the Tumor Microenvironment and Biological Pathways",
+        "abstract": "arXiv:2601.08336v1 Announce Type: new  Abstract: Automatic integration of whole slide images (WSIs) and gene expression profiles has demonstrated substantial potential in precision clinical diagnosis and cancer progression studies. However, most existing studies focus on individual gene sequences and slide level classification tasks, with limited attention to spatial transcriptomics and patch level applications. To address this limitation, we propose a multimodal network, BioMorphNet, which automatically integrates tissue morphological features and spatial gene expression to support tissue classification and differential gene analysis. For considering morphological features, BioMorphNet constructs a graph to model the relationships between target patches and their neighbors, and adjusts the response strength based on morphological and molecular level similarity, to better characterize the tumor microenvironment. In terms of multimodal interactions, BioMorphNet derives clinical pathway features from spatial transcriptomic data based on a predefined pathway database, serving as a bridge between tissue morphology and gene expression. In addition, a novel learnable pathway module is designed to automatically simulate the biological pathway formation process, providing a complementary representation to existing clinical pathways. Compared with the latest morphology gene multimodal methods, BioMorphNet's average classification metrics improve by 2.67%, 5.48%, and 6.29% for prostate cancer, colorectal cancer, and breast cancer datasets, respectively. BioMorphNet not only classifies tissue categories within WSIs accurately to support tumor localization, but also analyzes differential gene expression between tissue categories based on prediction confidence, contributing to the discovery of potential tumor biomarkers.",
+        "arxiv_id": "2601.08336",
+        "ARXIVID": "2601.08336",
+        "COMMENT": "This paper does not match any specific criteria but is related to multimodal learning with tissue morphology and gene expression integration.",
+        "RELEVANCE": 3,
         "NOVELTY": 6
     },
-    "2601.07163": {
+    "2601.08617": {
         "authors": [
-            "Shu Shen",
-            "C. L. Philip Chen",
-            "Tong Zhang"
+            "Leo Fillioux",
+            "Omprakash Chakraborty",
+            "Ismail Ben Ayed",
+            "Paul-Henry Courn\\`ede",
+            "Stergios Christodoulidis",
+            "Maria Vakalopoulou",
+            "Jose Dolz"
         ],
-        "title": "Test-time Adaptive Hierarchical Co-enhanced Denoising Network for Reliable Multimodal Classification",
-        "abstract": "arXiv:2601.07163v1 Announce Type: new  Abstract: Reliable learning on low-quality multimodal data is a widely concerning issue, especially in safety-critical applications. However, multimodal noise poses a major challenge in this domain and leads existing methods to suffer from two key limitations. First, they struggle to reliably remove heterogeneous data noise, hindering robust multimodal representation learning. Second, they exhibit limited adaptability and generalization when encountering previously unseen noise. To address these issues, we propose Test-time Adaptive Hierarchical Co-enhanced Denoising Network (TAHCD). On one hand, TAHCD introduces the Adaptive Stable Subspace Alignment and Sample-Adaptive Confidence Alignment to reliably remove heterogeneous noise. They account for noise at both global and instance levels and enable jointly removal of modality-specific and cross-modality noise, achieving robust learning. On the other hand, TAHCD introduces test-time cooperative enhancement, which adaptively updates the model in response to input noise in a label-free manner, improving adaptability and generalization. This is achieved by collaboratively enhancing the joint removal process of modality-specific and cross-modality noise across global and instance levels according to sample noise. Experiments on multiple benchmarks demonstrate that the proposed method achieves superior classification performance, robustness, and generalization compared with state-of-the-art reliable multimodal learning approaches.",
-        "arxiv_id": "2601.07163",
-        "ARXIVID": "2601.07163",
-        "COMMENT": "Matches criterion 2 (Visual and Multimodal Large Language Models) as it focuses on multimodal classification and denoising, which involves vision-language integration.",
-        "RELEVANCE": 5,
+        "title": "SoC: Semantic Orthogonal Calibration for Test-Time Prompt Tuning",
+        "abstract": "arXiv:2601.08617v1 Announce Type: new  Abstract: With the increasing adoption of vision-language models (VLMs) in critical decision-making systems such as healthcare or autonomous driving, the calibration of their uncertainty estimates becomes paramount. Yet, this dimension has been largely underexplored in the VLM test-time prompt-tuning (TPT) literature, which has predominantly focused on improving their discriminative performance. Recent state-of-the-art advocates for enforcing full orthogonality over pairs of text prompt embeddings to enhance separability, and therefore calibration. Nevertheless, as we theoretically show in this work, the inherent gradients from fully orthogonal constraints will strongly push semantically related classes away, ultimately making the model overconfident. Based on our findings, we propose Semantic Orthogonal Calibration (SoC), a Huber-based regularizer that enforces smooth prototype separation while preserving semantic proximity, thereby improving calibration compared to prior orthogonality-based approaches. Across a comprehensive empirical validation, we demonstrate that SoC consistently improves calibration performance, while also maintaining competitive discriminative capabilities.",
+        "arxiv_id": "2601.08617",
+        "ARXIVID": "2601.08617",
+        "COMMENT": "Does not match any specific criteria. Focuses on calibration of vision-language models for test-time prompt tuning, which is tangentially related to criterion 2 but not directly.",
+        "RELEVANCE": 3,
         "NOVELTY": 6
     },
-    "2601.07344": {
+    "2601.08125": {
         "authors": [
-            "Jiao Xu",
-            "Junwei Liu",
-            "Jiangwei Lao",
-            "Qi Zhu",
-            "Yunpeng Zhao",
-            "Congyun Jin",
-            "Shinan Liu",
-            "Zhihong Lu",
-            "Lihe Zhang",
-            "Xin Chen",
-            "Jian Wang",
-            "Ping Wang"
+            "Kequan Chen",
+            "Yuxuan Wang",
+            "Pan Liu",
+            "Victor L. Knoop",
+            "David Z. W. Wang",
+            "Yu Han"
         ],
-        "title": "PulseMind: A Multi-Modal Medical Model for Real-World Clinical Diagnosis",
-        "abstract": "arXiv:2601.07344v1 Announce Type: new  Abstract: Recent advances in medical multi-modal models focus on specialized image analysis like dermatology, pathology, or radiology. However, they do not fully capture the complexity of real-world clinical diagnostics, which involve heterogeneous inputs and require ongoing contextual understanding during patient-physician interactions. To bridge this gap, we introduce PulseMind, a new family of multi-modal diagnostic models that integrates a systematically curated dataset, a comprehensive evaluation benchmark, and a tailored training framework. Specifically, we first construct a diagnostic dataset, MediScope, which comprises 98,000 real-world multi-turn consultations and 601,500 medical images, spanning over 10 major clinical departments and more than 200 sub-specialties. Then, to better reflect the requirements of real-world clinical diagnosis, we develop the PulseMind Benchmark, a multi-turn diagnostic consultation benchmark with a four-dimensional evaluation protocol comprising proactiveness, accuracy, usefulness, and language quality. Finally, we design a training framework tailored for multi-modal clinical diagnostics, centered around a core component named Comparison-based Reinforcement Policy Optimization (CRPO). Compared to absolute score rewards, CRPO uses relative preference signals from multi-dimensional com-parisons to provide stable and human-aligned training guidance. Extensive experiments demonstrate that PulseMind achieves competitive performance on both the diagnostic consultation benchmark and public medical benchmarks.",
-        "arxiv_id": "2601.07344",
-        "ARXIVID": "2601.07344",
-        "COMMENT": "Does not closely match any specific criterion but is generally relevant to multimodal learning and medical applications.",
+        "title": "How vehicles change lanes after encountering crashes: Empirical analysis and modeling",
+        "abstract": "arXiv:2601.08125v1 Announce Type: new  Abstract: When a traffic crash occurs, following vehicles need to change lanes to bypass the obstruction. We define these maneuvers as post crash lane changes. In such scenarios, vehicles in the target lane may refuse to yield even after the lane change has already begun, increasing the complexity and crash risk of post crash LCs. However, the behavioral characteristics and motion patterns of post crash LCs remain unknown. To address this gap, we construct a post crash LC dataset by extracting vehicle trajectories from drone videos captured after crashes. Our empirical analysis reveals that, compared to mandatory LCs (MLCs) and discretionary LCs (DLCs), post crash LCs exhibit longer durations, lower insertion speeds, and higher crash risks. Notably, 79.4% of post crash LCs involve at least one instance of non yielding behavior from the new follower, compared to 21.7% for DLCs and 28.6% for MLCs. Building on these findings, we develop a novel trajectory prediction framework for post crash LCs. At its core is a graph based attention module that explicitly models yielding behavior as an auxiliary interaction aware task. This module is designed to guide both a conditional variational autoencoder and a Transformer based decoder to predict the lane changer's trajectory. By incorporating the interaction aware module, our model outperforms existing baselines in trajectory prediction performance by more than 10% in both average displacement error and final displacement error across different prediction horizons. Moreover, our model provides more reliable crash risk analysis by reducing false crash rates and improving conflict prediction accuracy. Finally, we validate the model's transferability using additional post crash LC datasets collected from different sites.",
+        "arxiv_id": "2601.08125",
+        "ARXIVID": "2601.08125",
+        "COMMENT": "This paper does not match any specific criteria but is related to trajectory prediction and modeling in traffic scenarios, which is tangentially related to embodied AI.",
+        "RELEVANCE": 3,
+        "NOVELTY": 5
+    },
+    "2601.07975": {
+        "authors": [
+            "Fei Li",
+            "Lang Qiao",
+            "Jiahao Fan",
+            "Yijia Xu",
+            "Shawn M. Kaeppler",
+            "Zhou Zhang"
+        ],
+        "title": "An Efficient Additive Kolmogorov-Arnold Transformer for Point-Level Maize Localization in Unmanned Aerial Vehicle Imagery",
+        "abstract": "arXiv:2601.07975v1 Announce Type: new  Abstract: High-resolution UAV photogrammetry has become a key technology for precision agriculture, enabling centimeter-level crop monitoring and point-level plant localization. However, point-level maize localization in UAV imagery remains challenging due to (1) extremely small object-to-pixel ratios, typically less than 0.1%, (2) prohibitive computational costs of quadratic attention on ultra-high-resolution images larger than 3000 x 4000 pixels, and (3) agricultural scene-specific complexities such as sparse object distribution and environmental variability that are poorly handled by general-purpose vision models.   To address these challenges, we propose the Additive Kolmogorov-Arnold Transformer (AKT), which replaces conventional multilayer perceptrons with Pade Kolmogorov-Arnold Network (PKAN) modules to enhance functional expressivity for small-object feature extraction, and introduces PKAN Additive Attention (PAA) to model multiscale spatial dependencies with reduced computational complexity. In addition, we present the Point-based Maize Localization (PML) dataset, consisting of 1,928 high-resolution UAV images with approximately 501,000 point annotations collected under real field conditions.   Extensive experiments show that AKT achieves an average F1-score of 62.8%, outperforming state-of-the-art methods by 4.2%, while reducing FLOPs by 12.6% and improving inference throughput by 20.7%. For downstream tasks, AKT attains a mean absolute error of 7.1 in stand counting and a root mean square error of 1.95-1.97 cm in interplant spacing estimation. These results demonstrate that integrating Kolmogorov-Arnold representation theory with efficient attention mechanisms offers an effective framework for high-resolution agricultural remote sensing.",
+        "arxiv_id": "2601.07975",
+        "ARXIVID": "2601.07975",
+        "COMMENT": "This paper does not match any specific criteria but is related to computer vision and machine learning in the context of UAV imagery and small-object detection.",
         "RELEVANCE": 3,
         "NOVELTY": 5
     }
